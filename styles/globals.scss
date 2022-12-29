@@ -1,1 +1,7 @@
-@import "~modern-normalize";
+@use "~modern-normalize" as normalize;
+@use "styles/utils/colors";
+
+body {
+  color: colors.$text-default;
+  background-color: colors.$bg-default;
+}
