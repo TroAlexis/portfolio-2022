@@ -4,7 +4,7 @@ import localFont from "@next/font/local";
 const getPathToFont = (font: string) => `../../assets/fonts/${font}.woff2`;
 
 export const roboto = Roboto({
-  weight: ["400", "700"],
+  weight: ["400", "500", "700"],
   variable: "--font-roboto",
   subsets: ["latin"],
 });
