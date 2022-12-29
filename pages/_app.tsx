@@ -1,6 +1,7 @@
 import "../styles/globals.scss";
 import type { AppProps } from "next/app";
 import { MantineProvider } from "@mantine/core";
+import { roboto } from "../config/next/fonts";
 import Container from "../config/mantine/container";
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -8,6 +9,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <MantineProvider
       theme={{
         colorScheme: "dark",
+        fontFamily: roboto.style.fontFamily,
         components: {
           Container,
         },
