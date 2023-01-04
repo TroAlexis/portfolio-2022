@@ -10,4 +10,5 @@ export const mantineTheme: MantineThemeOverride = {
   components: mantineComponents,
   spacing: mantineSpacing,
   fontSizes: mantineFontSizes,
+  defaultRadius: "md",
 };

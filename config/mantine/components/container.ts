@@ -2,6 +2,7 @@ import { MantineThemeComponents } from "@mantine/styles/lib/theme/types/MantineT
 
 const Container: MantineThemeComponents[string] = {
   defaultProps: {
+    size: "lg",
     sizes: {
       lg: 1120,
       md: 800,
