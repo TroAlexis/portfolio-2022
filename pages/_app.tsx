@@ -5,7 +5,7 @@ import { mantineTheme } from "@/config/mantine";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <MantineProvider theme={mantineTheme}>
+    <MantineProvider withCSSVariables theme={mantineTheme}>
       <Component {...pageProps} />
     </MantineProvider>
   );
