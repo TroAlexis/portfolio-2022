@@ -1,0 +1,9 @@
+@use "styles/utils/colors";
+
+.button {
+  text-shadow: 0 4px 6px rgb(33 37 41 / 20%), 0 0 1px rgb(33 37 41 / 32%);
+}
+
+.is-outline {
+  color: colors.$text-default;
+}
