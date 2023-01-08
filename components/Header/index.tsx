@@ -1,6 +1,5 @@
 import { FC } from "react";
-import { Container, Grid } from "@mantine/core";
-import { Index } from "components/Logo";
+import { Logo } from "components/Logo";
 import { HeaderLinks } from "components/Header/components/Links";
 import { ActionButtons } from "components/ActionButtons";
 
@@ -9,19 +8,19 @@ import styles from "./index.module.scss";
 export const Header: FC = () => {
   return (
     <header className={styles.wrapper}>
-      <Container>
-        <Grid align={"center"}>
-          <Grid.Col span={"auto"}>
-            <Index />
-          </Grid.Col>
-          <Grid.Col span={6}>
+      <div>
+        <div>
+          <div>
+            <Logo />
+          </div>
+          <div>
             <HeaderLinks />
-          </Grid.Col>
-          <Grid.Col span={"auto"}>
+          </div>
+          <div>
             <ActionButtons />
-          </Grid.Col>
-        </Grid>
-      </Container>
+          </div>
+        </div>
+      </div>
     </header>
   );
 };

@@ -1,8 +1,8 @@
 import { ComponentProps, FC } from "react";
 import { HeaderLink, HeaderLinkProps } from "components/Header/components/Link";
-import { clsx } from "@mantine/core";
 
 import styles from "./index.module.scss";
+import clsx from "clsx";
 
 export type HeaderLinksProps = ComponentProps<"ul">;
 

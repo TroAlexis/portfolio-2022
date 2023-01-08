@@ -1,22 +1,20 @@
-import {
-  Button as BaseButton,
-  ButtonProps as BaseButtonProps,
-  clsx,
-} from "@mantine/core";
-import { FC } from "react";
-
 import styles from "./index.module.scss";
+import { PolymorphicComponentProps } from "@/types/types";
+import { ComponentPropsWithoutRef, ElementType } from "react";
+import clsx from "clsx";
 
-export type ButtonProps = BaseButtonProps;
+export type ButtonProps<T extends ElementType> = PolymorphicComponentProps<T> &
+  ComponentPropsWithoutRef<T>;
 
-export const Button: FC<ButtonProps> = ({ className, ...props }) => {
-  const modifications = {
-    [styles["is-outline"]]: props.variant === "outline",
-  };
+const DEFAULT_TAG = "button";
 
-  const classes = clsx(className, styles.button, modifications);
+export const Button = <T extends ElementType = typeof DEFAULT_TAG>({
+  as,
+  className,
+  ...props
+}: ButtonProps<T>) => {
+  const Component = as || DEFAULT_TAG;
+  const classes = clsx(className, styles.button);
 
-  return (
-    <BaseButton className={classes} px={"md"} py={"sm"} mih={40} {...props} />
-  );
+  return <Component className={classes} {...props} />;
 };

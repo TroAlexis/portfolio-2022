@@ -1,8 +1,8 @@
 import { ComponentProps, FC } from "react";
 import Link from "next/link";
-import { clsx, Text } from "@mantine/core";
 
 import styles from "./index.module.scss";
+import clsx from "clsx";
 
 export type HeaderLinkProps = ComponentProps<typeof Link>;
 
@@ -15,9 +15,7 @@ export const HeaderLink: FC<HeaderLinkProps> = ({
 
   return (
     <Link className={classes} {...props}>
-      <Text span fz={"xs"} lts={0.5} fw={400}>
-        {children}
-      </Text>
+      <span>{children}</span>
     </Link>
   );
 };

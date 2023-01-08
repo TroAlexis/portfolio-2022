@@ -9,16 +9,11 @@
     "lint": "next lint --fix"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.5",
-    "@emotion/server": "^11.10.0",
-    "@mantine/core": "^5.9.5",
-    "@mantine/hooks": "^5.9.5",
-    "@mantine/modals": "^5.9.5",
-    "@mantine/next": "^5.9.5",
     "@next/font": "^13.1.1",
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.8",
+    "clsx": "^1.2.1",
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.3",
     "modern-normalize": "^1.1.0",

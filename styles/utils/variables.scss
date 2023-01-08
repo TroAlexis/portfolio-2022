@@ -1,0 +1,23 @@
+/* Spacing */
+$spacing-step: 4px;
+$spacing-xs: $spacing-step * 2;
+$spacing-sm: $spacing-step * 3;
+$spacing-md: $spacing-step * 4;
+$spacing-lg: $spacing-step * 5;
+$spacing-xl: $spacing-step * 6;
+$spacing-2xl: $spacing-step * 8;
+$spacing-3xl: $spacing-step * 10;
+
+/* Font sizes */
+$font-size-xs: 14px;
+$font-size-sm: 16px;
+$font-size-md: 18px;
+$font-size-lg: 24px;
+$font-size-xl: 40px;
+$font-size-2xl: 48px;
+$font-size-3xl: 60px;
+
+/* Container */
+$container-width-lg: 1120px;
+$container-width-md: 800px;
+$container-width-xs: 560px;

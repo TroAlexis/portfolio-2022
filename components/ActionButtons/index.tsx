@@ -1,16 +1,16 @@
+import styles from "./index.module.scss";
 import { FC } from "react";
-import { Flex } from "@mantine/core";
 import { Button } from "components/Button";
 
 export const ActionButtons: FC = () => {
   return (
-    <Flex align={"center"} gap={"md"}>
-      <Button variant={"outline"} size={"xs"} fw={500}>
-        Resume
-      </Button>
-      <Button size={"xs"} fw={500}>
-        Contact me
-      </Button>
-    </Flex>
+    <ul className={styles.buttons}>
+      <li>
+        <Button>Resume</Button>
+      </li>
+      <li>
+        <Button>Contact me</Button>
+      </li>
+    </ul>
   );
 };
