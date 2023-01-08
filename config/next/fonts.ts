@@ -5,11 +5,13 @@ const getPathToFont = (font: string) => `../../assets/fonts/${font}.woff2`;
 
 export const roboto = Roboto({
   weight: ["400", "500", "700"],
+  display: "swap",
   variable: "--font-roboto",
   subsets: ["latin"],
 });
 
 export const visueltPro = localFont({
+  display: "swap",
   src: [
     {
       path: "../../assets/fonts/VisueltPro-Regular.woff2",
