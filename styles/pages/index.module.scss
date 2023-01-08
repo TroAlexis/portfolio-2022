@@ -1,0 +1,23 @@
+@use "styles/utils/mixins";
+
+.page {
+  @include mixins.flex-column;
+
+  flex: 1;
+
+  &::after {
+    position: absolute;
+    top: -30vw;
+    left: 70vw;
+    z-index: -1;
+    display: block;
+    height: 0;
+    max-height: 0;
+    color: rgb(0 48 61 / 30%);
+    font-weight: 700;
+    font-size: 175vw;
+    letter-spacing: 0.0075em;
+    transform: rotate(50deg);
+    content: "A";
+  }
+}
