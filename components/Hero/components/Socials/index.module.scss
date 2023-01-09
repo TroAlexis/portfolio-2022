@@ -1,0 +1,26 @@
+@use "styles/utils/variables";
+@use "styles/utils/functions";
+@use "styles/utils/colors";
+
+.socials {
+  display: flex;
+  gap: variables.$spacing-3xl;
+  align-items: center;
+
+  &::before {
+    display: block;
+    width: functions.to-rem(100px);
+    border-top: 1px solid colors.$white;
+    content: "";
+  }
+}
+
+.icon {
+  width: functions.to-rem(variables.$spacing-xl);
+  height: functions.to-rem(variables.$spacing-xl);
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
