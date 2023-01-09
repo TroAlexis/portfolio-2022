@@ -8,7 +8,7 @@ type Props<T extends ElementType> = PolymorphicComponentProps<T> &
 
 const DEFAULT_TAG: ElementType = "div";
 
-const Container = <T extends ElementType = typeof DEFAULT_TAG>({
+export const Container = <T extends ElementType = typeof DEFAULT_TAG>({
   as,
   className,
   ...props
@@ -18,5 +18,3 @@ const Container = <T extends ElementType = typeof DEFAULT_TAG>({
 
   return <Component className={classes} {...props} />;
 };
-
-export default Container;
