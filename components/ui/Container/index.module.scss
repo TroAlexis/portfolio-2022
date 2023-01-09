@@ -2,6 +2,7 @@
 @use "styles/utils/variables";
 
 .container {
+  width: 100%;
   max-width: functions.get-container-width(variables.$container-width-lg);
   margin-right: auto;
   margin-left: auto;
