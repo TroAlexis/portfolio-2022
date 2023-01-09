@@ -1,0 +1,24 @@
+@use "styles/utils/colors";
+@use "styles/utils/variables";
+
+.text {
+  color: inherit;
+
+  &.accent {
+    color: colors.$green-600;
+  }
+}
+
+@each $variant, $size in variables.$font-sizes {
+  .size-#{$variant} {
+    font-size: $size;
+  }
+}
+
+$weights: (400, 500, 600, 700, 800, 900);
+
+@each $weight in $weights {
+  .weight-#{$weight} {
+    font-weight: $weight;
+  }
+}

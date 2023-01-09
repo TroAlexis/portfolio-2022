@@ -16,6 +16,15 @@ $font-size-lg: 24px;
 $font-size-xl: 40px;
 $font-size-2xl: 48px;
 $font-size-3xl: 60px;
+$font-sizes: (
+  "xs": $font-size-xs,
+  "sm": $font-size-sm,
+  "md": $font-size-md,
+  "lg": $font-size-lg,
+  "xl": $font-size-xl,
+  "2xl": $font-size-2xl,
+  "3xl": $font-size-3xl,
+);
 
 /* Container */
 $container-width-lg: 1120px;
