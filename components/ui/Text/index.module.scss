@@ -1,3 +1,4 @@
+@use "styles/utils/functions";
 @use "styles/utils/colors";
 @use "styles/utils/variables";
 
@@ -11,7 +12,7 @@
 
 @each $variant, $size in variables.$font-sizes {
   .size-#{$variant} {
-    font-size: $size;
+    font-size: functions.to-rem($size);
   }
 }
 

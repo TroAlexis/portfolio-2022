@@ -1,5 +1,10 @@
+@use "sass:math";
 @use "styles/utils/variables";
 
 @function get-container-width($width, $spacing: variables.$container-spacing) {
   @return $width + $spacing * 2;
+}
+
+@function to-rem($value) {
+  @return math.div($value, 16px) * 1rem;
 }
