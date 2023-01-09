@@ -1,0 +1,10 @@
+@use "styles/utils/functions";
+@use "styles/utils/variables";
+
+.container {
+  max-width: functions.get-container-width(variables.$container-width-lg);
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: variables.$container-spacing;
+  padding-left: variables.$container-spacing;
+}
