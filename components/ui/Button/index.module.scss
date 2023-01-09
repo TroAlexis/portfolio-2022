@@ -1,5 +1,17 @@
+@use "styles/utils/variables";
 @use "styles/utils/colors";
 
 .button {
+  padding: variables.$spacing-xs variables.$spacing-sm;
+  color: inherit;
+  font-weight: 500;
   text-shadow: 0 4px 6px rgb(33 37 41 / 20%), 0 0 1px rgb(33 37 41 / 32%);
+  background-color: colors.$green-600;
+  border: 1px solid colors.$green-600;
+  border-radius: 8px;
+  cursor: pointer;
+
+  &.isOutline {
+    background-color: transparent;
+  }
 }
