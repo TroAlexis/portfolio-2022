@@ -1,12 +1,16 @@
 import styles from "./index.module.scss";
-import { FC } from "react";
-import { Button } from "components/Button";
+import { ComponentProps, FC } from "react";
+import { Button } from "components/ui/Button";
+import clsx from "clsx";
 
-export const ActionButtons: FC = () => {
+type Props = ComponentProps<"ul">;
+
+export const ActionButtons: FC<Props> = ({ className, ...props }) => {
+  const classes = clsx(className, styles.buttons);
   return (
-    <ul className={styles.buttons}>
+    <ul className={classes}>
       <li>
-        <Button>Resume</Button>
+        <Button outline>Resume</Button>
       </li>
       <li>
         <Button>Contact me</Button>

@@ -1,4 +1,7 @@
+@use "styles/utils/variables";
+
 .buttons {
   display: flex;
+  gap: variables.$spacing-sm;
   align-items: center;
 }

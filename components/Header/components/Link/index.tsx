@@ -1,8 +1,8 @@
 import { ComponentProps, FC } from "react";
-import Link from "next/link";
 
 import styles from "./index.module.scss";
 import clsx from "clsx";
+import { Link } from "components/ui/Link";
 
 export type HeaderLinkProps = ComponentProps<typeof Link>;
 

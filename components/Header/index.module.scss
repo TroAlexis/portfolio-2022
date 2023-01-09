@@ -1,6 +1,20 @@
-.wrapper {
-  --padding-vertical: calc(var(--mantine-spacing-md) * 2);
+@use "styles/utils/variables";
 
-  padding-top: var(--padding-vertical);
-  padding-bottom: var(--padding-vertical);
+.wrapper {
+  padding-top: variables.$spacing-xl;
+  padding-bottom: variables.$spacing-xl;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.logo,
+.buttons {
+  flex-basis: 25%;
+}
+
+.links {
+  flex-basis: 50%;
 }

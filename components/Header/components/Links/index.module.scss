@@ -1,5 +1,7 @@
+@use "styles/utils/variables";
+
 .list {
   display: flex;
-  gap: calc(var(--mantine-spacing-xl) * 2);
+  gap: variables.$spacing-3xl;
   justify-content: center;
 }
