@@ -6,9 +6,18 @@ import clsx from "clsx";
 import { roboto } from "@/config/next/fonts";
 import { NextFont } from "@next/font/dist/types";
 
-type Tag = "div" | "p" | "span";
+export type TextTag =
+  | "div"
+  | "p"
+  | "span"
+  | "h1"
+  | "h2"
+  | "h3"
+  | "h4"
+  | "h5"
+  | "h6";
 
-type Props<T extends Tag> = PolymorphicComponentProps<T> &
+export type TextProps<T extends TextTag> = PolymorphicComponentProps<T> &
   PropsWithChildren<ComponentPropsWithoutRef<T>> & {
     size?: Size;
     weight?: number;
@@ -18,15 +27,15 @@ type Props<T extends Tag> = PolymorphicComponentProps<T> &
 
 const DEFAULT_TAG = "div";
 
-export const Text = <T extends Tag = typeof DEFAULT_TAG>({
+export const Text = <T extends TextTag = typeof DEFAULT_TAG>({
   as,
   family = roboto,
-  weight = 400,
-  size = "sm",
+  weight,
+  size,
   accent,
   className,
   ...props
-}: Props<T>) => {
+}: TextProps<T>) => {
   const Component = as || DEFAULT_TAG;
 
   const modifiers = {
