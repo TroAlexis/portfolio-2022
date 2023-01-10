@@ -16,6 +16,7 @@ export const HeroImage: FC<Props> = ({ className, ...props }) => {
           src={PersonalPhoto}
           alt={"Photo of me looking into brighter future"}
           width={450}
+          priority
           quality={100}
         />
       </div>
