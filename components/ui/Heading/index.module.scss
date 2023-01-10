@@ -1,0 +1,14 @@
+@use "styles/utils/functions";
+@use "styles/utils/colors";
+@use "styles/utils/mixins";
+
+.hr {
+  @include mixins.flex-column;
+
+  &::after {
+    display: block;
+    max-width: functions.to-rem(400px);
+    border-bottom: 5px solid colors.$green-600;
+    content: "";
+  }
+}

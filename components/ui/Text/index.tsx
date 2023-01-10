@@ -5,17 +5,9 @@ import { Size } from "@/types/ui";
 import clsx from "clsx";
 import { roboto } from "@/config/next/fonts";
 import { NextFont } from "@next/font/dist/types";
+import { HeadingTag } from "@/types/dom";
 
-export type TextTag =
-  | "div"
-  | "p"
-  | "span"
-  | "h1"
-  | "h2"
-  | "h3"
-  | "h4"
-  | "h5"
-  | "h6";
+export type TextTag = "div" | "p" | "span" | HeadingTag;
 
 export type TextProps<T extends TextTag> = PolymorphicComponentProps<T> &
   PropsWithChildren<ComponentPropsWithoutRef<T>> & {

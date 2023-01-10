@@ -10,13 +10,13 @@ export const HeroText: FC<Props> = ({ className, ...props }) => {
   const classes = clsx(className, styles.text);
   return (
     <div className={classes}>
-      <Heading as={"p"} size={"3xl"} className={styles.heading}>
+      <Heading as={"p"} preset={"h1"} className={styles.heading}>
         Hey there! I’m{" "}
         <Text as={"span"} accent size={undefined}>
           Alex Troshin
         </Text>
       </Heading>
-      <Heading as={"h1"} size={"2xl"} className={styles.subheading}>
+      <Heading as={"h1"} preset={"h2"} className={styles.subheading}>
         A passionate software engineer
       </Heading>
       <Text as={"p"} className={styles.description}>
