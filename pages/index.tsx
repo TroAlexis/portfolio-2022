@@ -10,7 +10,6 @@ export default function Home() {
       <Head>
         <title>Alexey Troshin | Portfolio</title>
         <meta name="description" content="Alexey Troshin's portfolio page" />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Hero className={styles.hero} />
