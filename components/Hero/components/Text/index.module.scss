@@ -1,0 +1,21 @@
+@use "styles/utils/mixins";
+@use "styles/utils/variables";
+
+.text {
+  @include mixins.flex-column;
+
+  justify-content: center;
+}
+
+.heading {
+  letter-spacing: 0.0075em;
+}
+
+.heading,
+.subheading {
+  margin-bottom: variables.$spacing-sm;
+}
+
+.description {
+  line-height: 1.5;
+}
