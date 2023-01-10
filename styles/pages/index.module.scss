@@ -23,5 +23,6 @@
 }
 
 .hero {
-  flex: 1;
+  min-height: 100vh;
+  min-height: calc(var(--hero-height, 1vh) * 100);
 }

@@ -1,0 +1,24 @@
+@use "styles/utils/functions";
+
+.wrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+.container {
+  overflow: hidden;
+  background: linear-gradient(
+    -14deg,
+    rgb(255 255 255 / 100%) 0%,
+    rgb(255 255 255 / 100%) 50%,
+    rgb(255 255 255 / 0%) 50.2%
+  );
+  border-radius: 0 50% 50%;
+}
+
+.image {
+  position: relative;
+  margin-right: functions.to-rem(50px);
+  margin-bottom: functions.to-rem(-10px);
+  margin-left: functions.to-rem(50px);
+}

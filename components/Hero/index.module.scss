@@ -1,5 +1,8 @@
+@use "styles/utils/functions";
 @use "styles/utils/variables";
 @use "styles/utils/mixins";
+
+$bottom-spacing: variables.$spacing-3xl * 2;
 
 .hero {
   @include mixins.flex-column;
@@ -8,6 +11,7 @@
 .container {
   @include mixins.flex-column;
 
+  position: relative;
   flex: 1;
 }
 
@@ -17,5 +21,14 @@
 
 .socials {
   margin-top: variables.$spacing-lg;
-  margin-bottom: variables.$spacing-3xl * 2;
+  margin-bottom: $bottom-spacing;
+}
+
+.image {
+  &#{&} {
+    position: absolute;
+  }
+
+  right: functions.to-rem(-90px);
+  bottom: $bottom-spacing;
 }
