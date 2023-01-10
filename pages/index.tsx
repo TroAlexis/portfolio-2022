@@ -2,6 +2,7 @@ import Head from "next/head";
 
 import styles from "styles/pages/index.module.scss";
 import { Hero } from "components/Hero";
+import AboutSection from "components/sections/About";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       </Head>
 
       <Hero className={styles.hero} />
+      <AboutSection className={styles.section} />
     </div>
   );
 }
