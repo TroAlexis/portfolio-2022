@@ -1,10 +1,10 @@
-import { FC } from "react";
-import { Logo } from "components/ui/Logo";
-import { HeaderLinks } from "components/Header/components/Links";
 import { ActionButtons } from "components/ActionButtons";
+import { HeaderLinks } from "components/Header/components/Links";
+import { Container } from "components/ui/Container";
+import { Logo } from "components/ui/Logo";
+import { FC } from "react";
 
 import styles from "./index.module.scss";
-import { Container } from "components/ui/Container";
 
 export const Header: FC = () => {
   return (

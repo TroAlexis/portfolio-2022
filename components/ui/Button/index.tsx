@@ -1,7 +1,9 @@
-import styles from "./index.module.scss";
-import { PolymorphicComponentProps } from "@/types/types";
-import { ComponentPropsWithoutRef, ElementType } from "react";
 import clsx from "clsx";
+import { ComponentPropsWithoutRef, ElementType } from "react";
+
+import { PolymorphicComponentProps } from "@/types/types";
+
+import styles from "./index.module.scss";
 
 export type ButtonProps<T extends ElementType> = PolymorphicComponentProps<T> &
   ComponentPropsWithoutRef<T> & {

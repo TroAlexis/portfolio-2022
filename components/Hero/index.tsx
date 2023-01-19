@@ -1,11 +1,12 @@
-import styles from "./index.module.scss";
-import React, { ComponentProps, FC } from "react";
-import { Container } from "components/ui/Container";
 import clsx from "clsx";
+import { HeroImage } from "components/Hero/components/Image";
 import { HeroSocials } from "components/Hero/components/Socials";
 import { HeroText } from "components/Hero/components/Text";
-import { HeroImage } from "components/Hero/components/Image";
 import { useHeroHeight } from "components/Hero/hooks/useHeroHeight";
+import { Container } from "components/ui/Container";
+import React, { ComponentProps, FC } from "react";
+
+import styles from "./index.module.scss";
 
 type Props = ComponentProps<"section">;
 

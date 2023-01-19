@@ -1,9 +1,11 @@
-import styles from "./index.module.scss";
-import React, { ComponentProps, FC } from "react";
-import { Heading } from "components/ui/Heading";
 import { Container } from "components/ui/Container";
+import { Heading } from "components/ui/Heading";
 import { Text } from "components/ui/Text";
+import React, { ComponentProps, FC } from "react";
+
 import { APP_SECTIONS } from "@/config/app/sections";
+
+import styles from "./index.module.scss";
 
 interface Props extends ComponentProps<"section"> {}
 

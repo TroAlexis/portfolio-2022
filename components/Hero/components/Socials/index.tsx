@@ -1,9 +1,10 @@
-import styles from "./index.module.scss";
-import React, { ComponentProps, FC } from "react";
-import clsx from "clsx";
 import GithubIcon from "assets/svg/github.svg";
-import LinkedInIcon from "assets/svg/linkedin.svg";
 import InstagramIcon from "assets/svg/instagram.svg";
+import LinkedInIcon from "assets/svg/linkedin.svg";
+import clsx from "clsx";
+import React, { ComponentProps, FC } from "react";
+
+import styles from "./index.module.scss";
 
 type Props = ComponentProps<"ul">;
 

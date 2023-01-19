@@ -1,7 +1,9 @@
-import styles from "./index.module.scss";
-import React, { ComponentProps, ElementType, PropsWithChildren } from "react";
-import { PolymorphicComponentProps } from "@/types/types";
 import clsx from "clsx";
+import React, { ComponentProps, ElementType, PropsWithChildren } from "react";
+
+import { PolymorphicComponentProps } from "@/types/types";
+
+import styles from "./index.module.scss";
 
 type Props<T extends ElementType> = PolymorphicComponentProps<T> &
   PropsWithChildren<ComponentProps<T>>;

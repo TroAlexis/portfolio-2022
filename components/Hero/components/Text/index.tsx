@@ -1,8 +1,9 @@
-import styles from "./index.module.scss";
-import React, { ComponentProps, FC } from "react";
 import clsx from "clsx";
 import { Heading } from "components/ui/Heading";
 import { Text } from "components/ui/Text";
+import React, { ComponentProps, FC } from "react";
+
+import styles from "./index.module.scss";
 
 interface Props extends ComponentProps<"div"> {}
 

@@ -1,7 +1,8 @@
-import styles from "./index.module.scss";
-import { ComponentProps, FC } from "react";
-import { Button } from "components/ui/Button";
 import clsx from "clsx";
+import { Button } from "components/ui/Button";
+import { ComponentProps, FC } from "react";
+
+import styles from "./index.module.scss";
 
 type Props = ComponentProps<"ul">;
 

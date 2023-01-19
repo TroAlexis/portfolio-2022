@@ -1,11 +1,13 @@
-import styles from "./index.module.scss";
+import { NextFont } from "@next/font/dist/types";
+import clsx from "clsx";
 import React, { ComponentPropsWithoutRef, PropsWithChildren } from "react";
+
+import { roboto } from "@/config/next/fonts";
+import { HeadingTag } from "@/types/dom";
 import { PolymorphicComponentProps } from "@/types/types";
 import { Size } from "@/types/ui";
-import clsx from "clsx";
-import { roboto } from "@/config/next/fonts";
-import { NextFont } from "@next/font/dist/types";
-import { HeadingTag } from "@/types/dom";
+
+import styles from "./index.module.scss";
 
 export type TextTag = "div" | "p" | "span" | HeadingTag;
 

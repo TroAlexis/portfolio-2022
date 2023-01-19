@@ -1,9 +1,10 @@
-import { ComponentProps, FC } from "react";
+import clsx from "clsx";
 import { HeaderLink, HeaderLinkProps } from "components/Header/components/Link";
+import { ComponentProps, FC } from "react";
+
+import { APP_SECTIONS } from "@/config/app/sections";
 
 import styles from "./index.module.scss";
-import clsx from "clsx";
-import { APP_SECTIONS } from "@/config/app/sections";
 
 export type HeaderLinksProps = ComponentProps<"ul">;
 

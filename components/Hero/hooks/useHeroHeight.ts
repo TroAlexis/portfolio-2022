@@ -1,6 +1,6 @@
-import { useEffect } from "react";
 import headerStyles from "components/Header/index.module.scss";
 import { debounce } from "debounce";
+import { useEffect } from "react";
 
 const getVh = () => {
   return window.innerHeight * 0.01;

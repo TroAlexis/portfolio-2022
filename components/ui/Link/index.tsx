@@ -1,7 +1,8 @@
-import styles from "./index.module.scss";
-import React, { ComponentProps, FC } from "react";
-import NextLink from "next/link";
 import clsx from "clsx";
+import NextLink from "next/link";
+import React, { ComponentProps, FC } from "react";
+
+import styles from "./index.module.scss";
 
 type Props = ComponentProps<typeof NextLink>;
 

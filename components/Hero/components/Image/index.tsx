@@ -1,8 +1,9 @@
-import styles from "./index.module.scss";
-import React, { ComponentProps, FC } from "react";
 import clsx from "clsx";
-import Image from "next/image";
 import PersonalPhoto from "images/hero-image.png";
+import Image from "next/image";
+import React, { ComponentProps, FC } from "react";
+
+import styles from "./index.module.scss";
 
 interface Props extends ComponentProps<"div"> {}
 

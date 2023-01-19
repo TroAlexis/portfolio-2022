@@ -1,4 +1,5 @@
 import { TextProps } from "components/ui/Text";
+
 import { HeadingTag } from "@/types/dom";
 
 type PresetProps = Pick<TextProps<HeadingTag>, "size">;
