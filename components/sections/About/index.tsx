@@ -17,7 +17,7 @@ const paragraphs = [
 
 const section = APP_SECTIONS.about;
 
-const AboutSection: FC<Props> = (props) => {
+export const AboutSection: FC<Props> = (props) => {
   return (
     <section id={section.id} {...props}>
       <Container>
@@ -33,5 +33,3 @@ const AboutSection: FC<Props> = (props) => {
     </section>
   );
 };
-
-export default AboutSection;

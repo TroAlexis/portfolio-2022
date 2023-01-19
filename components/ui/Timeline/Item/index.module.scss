@@ -1,0 +1,81 @@
+@use "styles/utils/variables";
+@use "styles/utils/colors";
+
+$circle-size: variables.$spacing-xl;
+
+.item {
+  display: flex;
+
+  /* Circle */
+  &::before {
+    flex: 1 0 $circle-size;
+    order: 2;
+    width: $circle-size;
+    height: $circle-size;
+    margin-left: variables.$spacing-lg;
+    background: linear-gradient(90deg, #088259 0%, #0cc285 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 22px 2px rgb(8 130 89 / 60%);
+  }
+
+  /* Bar */
+  &::after {
+    order: 3;
+    width: 0;
+    min-width: 0;
+    margin-bottom: $circle-size + variables.$spacing-sm;
+    border-right: 2px solid colors.$white;
+    transform: translateX(calc(-#{$circle-size / 2} - 50%))
+      translateY(#{$circle-size + variables.$spacing-sm});
+  }
+
+  &::before,
+  &::after {
+    display: block;
+    content: "";
+  }
+}
+
+.label {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  order: 1;
+  max-width: 80px;
+  padding-right: variables.$spacing-md;
+  padding-left: variables.$spacing-md;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.arrow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  min-height: 100%;
+  color: colors.$dark-600;
+}
+
+.body {
+  order: 4;
+  margin-left: variables.$spacing-sm;
+  padding-bottom: variables.$spacing-xs;
+}
+
+.title {
+  margin-bottom: variables.$spacing-step;
+  line-height: 1.33;
+}
+
+.period {
+  margin-bottom: variables.$spacing-sm;
+  text-transform: uppercase;
+}
+
+.description {
+  line-height: 1.5;
+}

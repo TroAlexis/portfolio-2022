@@ -2,7 +2,7 @@
 @use "styles/utils/functions";
 
 .heading {
-  margin-bottom: functions.to-rem(variables.$spacing-xl);
+  margin-bottom: functions.to-rem(variables.$spacing-3xl);
 }
 
 .paragraph {

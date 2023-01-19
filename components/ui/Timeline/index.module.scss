@@ -1,0 +1,8 @@
+@use "styles/utils/variables";
+@use "styles/utils/mixins";
+
+.timeline {
+  @include mixins.flex-column;
+
+  gap: variables.$spacing-xl;
+}
