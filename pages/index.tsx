@@ -1,8 +1,8 @@
-import Head from "next/head";
-
-import styles from "styles/pages/index.module.scss";
 import { Hero } from "components/Hero";
 import AboutSection from "components/sections/About";
+import { ProjectsSection } from "components/sections/Projects";
+import Head from "next/head";
+import styles from "styles/pages/index.module.scss";
 
 export default function Home() {
   return (
@@ -14,6 +14,7 @@ export default function Home() {
 
       <Hero className={styles.hero} />
       <AboutSection className={styles.section} />
+      <ProjectsSection className={styles.section} />
     </div>
   );
 }

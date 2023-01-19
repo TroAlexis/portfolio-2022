@@ -1,0 +1,6 @@
+@use "styles/utils/variables";
+@use "styles/utils/functions";
+
+.heading {
+  margin-bottom: functions.to-rem(variables.$spacing-xl);
+}

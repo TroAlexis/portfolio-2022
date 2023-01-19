@@ -24,10 +24,14 @@
 }
 
 .hero {
-  min-height: 100vh;
-  min-height: calc(var(--hero-height, 1vh) * 100);
+  height: calc(var(--hero-height, 1vh) * 100);
+  min-height: 650px;
 }
 
 .section {
   padding-top: variables.$spacing-lg * 3;
+
+  & + & {
+    margin-top: variables.$spacing-lg * 3;
+  }
 }

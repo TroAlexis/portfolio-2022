@@ -1,0 +1,33 @@
+@use "styles/utils/variables";
+@use "styles/utils/mixins";
+
+.card {
+  @include mixins.flex-column;
+}
+
+.image {
+  width: 100%;
+  object-fit: cover;
+  border-radius: variables.$border-radius;
+}
+
+.heading,
+.image {
+  margin-bottom: variables.$spacing-md;
+}
+
+.description {
+  line-height: 1.5;
+}
+
+.links {
+  display: flex;
+  gap: variables.$spacing-md;
+  margin-top: variables.$spacing-md;
+}
+
+.link {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}

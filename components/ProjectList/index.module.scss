@@ -1,0 +1,11 @@
+@use "styles/utils/variables";
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: variables.$spacing-2xl;
+}
+
+.item {
+  flex: 0 1 calc(50% - #{variables.$spacing-2xl / 2});
+}
