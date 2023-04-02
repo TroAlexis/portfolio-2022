@@ -1,0 +1,18 @@
+@use "styles/utils/variables";
+@use "styles/utils/functions";
+
+$spacing: functions.to-rem(variables.$spacing-3xl);
+$item-size: calc(50% - #{$spacing / 2});
+
+.heading {
+  margin-bottom: functions.to-rem(variables.$spacing-3xl);
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list, .description {
+  flex-basis: $item-size;
+}

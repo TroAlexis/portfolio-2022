@@ -1,0 +1,26 @@
+@use "styles/utils/variables";
+@use "styles/utils/functions";
+
+$card-size: 90px;
+
+$spacing: functions.to-rem(variables.$spacing-sm);
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -$spacing / 2;
+}
+
+
+.item {
+    display: flex;
+    width: calc(20% - #{$spacing});
+    margin: $spacing / 2;
+}
+
+.card {
+    flex: 1;
+    padding: functions.to-rem(variables.$spacing-xs) 0;
+    border: 0;
+    cursor: pointer;
+}
