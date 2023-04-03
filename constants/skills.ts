@@ -44,15 +44,19 @@ export const skillsMap: Partial<Record<Skills, SkillProps>> = {
     label: Skills.JAVASCRIPT,
     style: createStyle("#EBD94D"),
     description: [
-      "Making vanilla Javascript plugins (dropdowns, datepicker, custom form elements)",
+      "Made vanilla Javascript plugins (dropdowns, datepicker, custom form elements)",
       "Created a lightweight library based on Intersection Observer API for generating navigation menu and tracking scroll position, which evolved from a task on my job at the time",
-      "Using modern APIs and operators, following best practices",
+      "Utilising modern APIs, operators and following best practices",
     ],
   },
   [Skills.TYPESCRIPT]: {
     icon: IconBrandTypescript,
     label: Skills.TYPESCRIPT,
     style: createStyle("#4170B6"),
+    description: [
+      "Using latest features for building type-safe systems",
+      "Using and creating generic types and components",
+    ],
   },
   [Skills.CSS]: {
     icon: IconBrandCss3,
