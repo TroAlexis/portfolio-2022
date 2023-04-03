@@ -3,4 +3,5 @@ export const APP_SECTIONS = {
   skills: { id: "skills" },
   projects: { id: "projects" },
   experience: { id: "experience" },
+  "lets-talk": { id: "lets-talk" },
 };

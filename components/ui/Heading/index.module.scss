@@ -7,6 +7,7 @@
 
   &::after {
     display: block;
+    width: 100%;
     max-width: functions.to-rem(400px);
     border-bottom: 5px solid colors.$green-600;
     content: "";

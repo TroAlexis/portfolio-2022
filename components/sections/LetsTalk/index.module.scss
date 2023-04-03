@@ -1,0 +1,9 @@
+.section {
+    text-align: center;
+}
+
+.heading {
+    &::after {
+        align-self: center;
+    }
+}

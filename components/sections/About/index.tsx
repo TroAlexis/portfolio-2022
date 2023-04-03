@@ -1,5 +1,4 @@
-import { Container } from "components/ui/Container";
-import { Heading } from "components/ui/Heading";
+import { MainSection } from "components/MainSection";
 import { Text } from "components/ui/Text";
 import React, { ComponentProps, FC } from "react";
 
@@ -19,17 +18,12 @@ const section = APP_SECTIONS.about;
 
 export const AboutSection: FC<Props> = (props) => {
   return (
-    <section id={section.id} {...props}>
-      <Container>
-        <Heading hr preset={"h2"} as={"h2"} className={styles.heading}>
-          About me
-        </Heading>
-        {paragraphs.map((paragraph, index) => (
-          <Text as={"p"} key={index} className={styles.paragraph}>
-            {paragraph}
-          </Text>
-        ))}
-      </Container>
-    </section>
+    <MainSection section={section} heading={"About me"} {...props}>
+      {paragraphs.map((paragraph, index) => (
+        <Text as={"p"} key={index} className={styles.paragraph}>
+          {paragraph}
+        </Text>
+      ))}
+    </MainSection>
   );
 };
