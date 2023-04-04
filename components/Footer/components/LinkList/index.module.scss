@@ -1,0 +1,12 @@
+@use "styles/utils/variables";
+@use "styles/utils/functions";
+
+.list {
+  display: flex;
+  justify-content: center;
+  margin: functions.to-rem(variables.$spacing-3xl / -2);
+}
+
+.item {
+  margin: functions.to-rem(variables.$spacing-3xl / 2);
+}

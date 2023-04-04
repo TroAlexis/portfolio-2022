@@ -9,6 +9,7 @@ $spacing-2xl: $spacing-step * 8;
 $spacing-3xl: $spacing-step * 10;
 
 /* Font sizes */
+$font-size-2xs: 12px;
 $font-size-xs: 14px;
 $font-size-sm: 16px;
 $font-size-md: 18px;
@@ -17,6 +18,7 @@ $font-size-xl: 40px;
 $font-size-2xl: 48px;
 $font-size-3xl: 60px;
 $font-sizes: (
+  "2xs": $font-size-2xs,
   "xs": $font-size-xs,
   "sm": $font-size-sm,
   "md": $font-size-md,

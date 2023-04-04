@@ -1,0 +1,39 @@
+@use "styles/utils/variables";
+@use "styles/utils/functions";
+@use "styles/utils/colors";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: functions.to-rem(variables.$spacing-2xl) 0
+    functions.to-rem(variables.$spacing-lg) 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+
+  &::before,
+  &::after {
+    display: block;
+    flex: 1;
+    height: 0;
+    max-height: 0;
+    border-bottom: 1px solid colors.$white;
+    content: "";
+  }
+
+  &::before {
+    margin-right: 10%;
+  }
+
+  &::after {
+    margin-left: 10%;
+  }
+}
+
+.copyright {
+  margin-top: functions.to-rem(variables.$spacing-md);
+  color: colors.$neutral-400;
+  text-align: center;
+}
