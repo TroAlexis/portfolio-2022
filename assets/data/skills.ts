@@ -10,7 +10,7 @@ import {
 } from "@tabler/icons-react";
 import IconJest from "assets/svg/jest.svg";
 import { IconWebpack } from "components/icons/IconWebpack";
-import { SkillCardProps } from "components/SkillCard";
+import { SkillCardProps } from "components/skills/SkillCard";
 import { CSSProperties } from "react";
 
 export enum Skills {

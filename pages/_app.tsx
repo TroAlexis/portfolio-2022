@@ -1,6 +1,6 @@
-import "../styles/globals.scss";
+import "styles/globals.scss";
 
-import { Layout } from "components/Layout";
+import { Layout } from "components/main/Layout";
 import type { AppProps } from "next/app";
 
 export default function App({ Component, pageProps }: AppProps) {

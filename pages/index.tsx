@@ -1,9 +1,9 @@
-import { Hero } from "components/Hero";
-import { AboutSection } from "components/sections/About";
-import { ExperienceSection } from "components/sections/Experience";
-import { LetsTalkSection } from "components/sections/LetsTalk";
-import { ProjectsSection } from "components/sections/Projects";
-import { SkillsSection } from "components/sections/Skills";
+import { Hero } from "components/main/Hero";
+import { AboutSection } from "components/main/sections/About";
+import { ExperienceSection } from "components/main/sections/Experience";
+import { LetsTalkSection } from "components/main/sections/LetsTalk";
+import { ProjectsSection } from "components/main/sections/Projects";
+import { SkillsSection } from "components/main/sections/Skills";
 import Head from "next/head";
 import styles from "styles/pages/index.module.scss";
 
