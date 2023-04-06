@@ -16,16 +16,16 @@ export type ProjectLink = {
   accent?: boolean;
 };
 
-export enum ProjectParagraphPosition {
-  LTR,
-  RTL,
-  VERTICAL,
+export enum ProjectParagraphDirection {
+  LTR = "ltr",
+  RTL = "rtl",
+  VERTICAL = "vertical",
 }
 
 export type ProjectParagraph = {
   title: string;
   image: string | StaticImageData;
-  position: ProjectParagraphPosition;
+  direction: ProjectParagraphDirection;
   description: string[];
 };
 

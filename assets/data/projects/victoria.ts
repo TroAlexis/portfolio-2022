@@ -1,9 +1,16 @@
 import VictoriaCover from "images/projects/victoria/victoria.jpg";
+import VictoriaGoal from "images/projects/victoria/victoria-1.png";
+import VictoriaDesign from "images/projects/victoria/victoria-2.png";
+import VictoriaProblem from "images/projects/victoria/victoria-3.png";
 import VictoriaHero from "images/projects/victoria/victoria-cover.png";
 
 import { ProjectSlug } from "@/constants/projects";
 import { Route } from "@/constants/routes";
-import { Project, ProjectCardInfo } from "@/types/project";
+import {
+  Project,
+  ProjectCardInfo,
+  ProjectParagraphDirection,
+} from "@/types/project";
 
 export const victoriaProject: Project = {
   id: ProjectSlug.VICTORIA,
@@ -17,6 +24,32 @@ export const victoriaProject: Project = {
   links: [
     { label: "read more", accent: true, href: "/" },
     { label: "view code", href: "/" },
+  ],
+  paragraphs: [
+    {
+      image: VictoriaGoal,
+      description: [
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque quam quas tempore unde veritatis! Consequatur culpa fuga inventore nesciunt omnis quia repellat soluta, tempore voluptas. Autem expedita iusto laborum officiis?",
+      ],
+      title: "Purpose & Goal",
+      direction: ProjectParagraphDirection.LTR,
+    },
+    {
+      image: VictoriaDesign,
+      description: [
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque quam quas tempore unde veritatis! Consequatur culpa fuga inventore nesciunt omnis quia repellat soluta, tempore voluptas. Autem expedita iusto laborum officiis?",
+      ],
+      title: "Design Challenge",
+      direction: ProjectParagraphDirection.RTL,
+    },
+    {
+      image: VictoriaProblem,
+      description: [
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque quam quas tempore unde veritatis! Consequatur culpa fuga inventore nesciunt omnis quia repellat soluta, tempore voluptas. Autem expedita iusto laborum officiis?",
+      ],
+      title: "Problems & Solutions",
+      direction: ProjectParagraphDirection.VERTICAL,
+    },
   ],
 };
 

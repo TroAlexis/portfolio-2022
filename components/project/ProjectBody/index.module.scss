@@ -1,0 +1,8 @@
+@use "styles/utils/variables";
+@use "styles/utils/functions";
+
+.paragraph {
+  & + & {
+    margin-top: functions.to-rem(variables.$spacing-2xl);
+  }
+}

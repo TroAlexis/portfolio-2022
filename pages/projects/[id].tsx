@@ -1,4 +1,5 @@
 import { projectsMap } from "assets/data/projects";
+import { ProjectBody } from "components/project/ProjectBody";
 import { ProjectHead } from "components/project/ProjectHead";
 import Head from "next/head";
 import { useRouter } from "next/router";
@@ -31,6 +32,8 @@ export default function Projects() {
       </Head>
 
       <ProjectHead project={project} className={styles.head} />
+
+      <ProjectBody project={project} />
     </div>
   );
 }

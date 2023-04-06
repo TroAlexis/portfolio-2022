@@ -1,0 +1,57 @@
+@use "styles/utils/variables";
+@use "styles/utils/functions";
+
+$heading: h;
+$description: d;
+$image: i;
+
+.wrapper {
+  display: grid;
+  grid-gap: functions.to-rem(variables.$spacing-xl)
+    functions.to-rem(variables.$spacing-2xl);
+  grid-template-rows: auto 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+
+  &.ltr {
+    grid-template-areas: "#{$heading} #{$heading} #{$image} #{$image}""#{$description} #{$description} #{$image} #{$image}""#{$description} #{$description} #{$image} #{$image}";
+  }
+
+  &.rtl {
+    grid-template-areas: "#{$image} #{$image} #{$heading} #{$heading}""#{$image} #{$image} #{$description} #{$description}""#{$image} #{$image} #{$description} #{$description}";
+  }
+
+  &.vertical {
+    grid-template-areas: "#{$heading}""#{$description}""#{$image}";
+    grid-template-rows: auto;
+    /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+}
+
+.heading {
+  grid-area: $heading;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  grid-area: $description;
+}
+
+.paragraph {
+  line-height: 1.5;
+}
+
+.imageWrapper {
+  grid-area: $image;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: variables.$shadow-image;
+}

@@ -19,6 +19,8 @@
 .image {
   align-self: center;
   max-width: 75%;
+  border-radius: 8px;
+  box-shadow: variables.$shadow-image;
 }
 
 .description {
