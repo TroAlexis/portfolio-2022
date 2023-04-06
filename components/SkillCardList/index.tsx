@@ -6,16 +6,16 @@ import { Skills, skills } from "@/constants/skills";
 
 import styles from "./index.module.scss";
 
-type CardProps = Pick<ComponentProps<typeof SkillCard>, "onClick">;
+type CardProps = Pick<ComponentProps<typeof SkillCard>, "onActive">;
 
 interface Props extends ComponentProps<"ul"> {
-  onItemClick: CardProps["onClick"];
+  onItemActive: CardProps["onActive"];
   activeSkill: Skills;
 }
 
 export const SkillCardList: FC<Props> = ({
   className,
-  onItemClick,
+  onItemActive,
   activeSkill,
   ...props
 }) => {
@@ -28,7 +28,7 @@ export const SkillCardList: FC<Props> = ({
             id={key}
             as={"button"}
             type={"button"}
-            onClick={onItemClick}
+            onActive={onItemActive}
             active={activeSkill === key}
             {...skill}
             className={styles.card}

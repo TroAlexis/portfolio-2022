@@ -25,7 +25,7 @@ export const SkillsSection: FC<Props> = (props) => {
         <SkillCardList
           className={styles.list}
           activeSkill={skill}
-          onItemClick={setSkill}
+          onItemActive={setSkill}
         />
         {description && (
           <SkillDescription

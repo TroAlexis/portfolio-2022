@@ -29,8 +29,6 @@
   transition-property: background-color;
 
   &:hover,
-  &:active,
-  &:focus,
   &.active {
     background-color: color.adjust(colors.$white, $alpha: -0.9);
 
