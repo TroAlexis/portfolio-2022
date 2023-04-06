@@ -30,7 +30,7 @@ export default function Projects() {
         <meta name="description" content="Alexey Troshin's portfolio page" />
       </Head>
 
-      <ProjectHead project={project} />
+      <ProjectHead project={project} className={styles.head} />
     </div>
   );
 }
