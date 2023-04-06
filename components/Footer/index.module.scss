@@ -7,6 +7,7 @@
   flex-direction: column;
   padding: functions.to-rem(variables.$spacing-2xl) 0
     functions.to-rem(variables.$spacing-lg) 0;
+  letter-spacing: functions.to-rem(0.4px);
 }
 
 .container {
