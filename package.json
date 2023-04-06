@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint --fix",
-    "style:fix": "stylelint '**/*.{css,scss}' --fix"
+    "style:fix": "stylelint '**/*.{css,scss}' --fix",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@next/font": "^13.1.1",
@@ -20,6 +21,7 @@
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.3",
     "eslint-plugin-simple-import-sort": "^9.0.0",
+    "husky": "^8.0.3",
     "modern-normalize": "^1.1.0",
     "next": "13.0.3",
     "react": "18.2.0",
@@ -31,7 +33,6 @@
     "@types/debounce": "^1.2.1",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "husky": "^8.0.2",
     "lint-staged": "^13.1.0",
     "prettier": "^2.8.1",
     "sass": "^1.56.1",
