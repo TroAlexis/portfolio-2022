@@ -30,6 +30,6 @@ $bottom-spacing: variables.$spacing-3xl * 2;
   }
 
   right: functions.to-rem(-90px);
-  transform: translateY(50%);
   bottom: 50%;
+  transform: translateY(50%);
 }

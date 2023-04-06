@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint --fix"
+    "lint": "next lint --fix",
+    "style:fix": "stylelint '**/*.{css,scss}' --fix"
   },
   "dependencies": {
     "@next/font": "^13.1.1",

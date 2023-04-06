@@ -9,6 +9,7 @@ $item-size: calc(50% - #{$spacing / 2});
   justify-content: space-between;
 }
 
-.list, .description {
+.list,
+.description {
   flex-basis: $item-size;
 }
