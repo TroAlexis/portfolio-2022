@@ -1,4 +1,3 @@
-import { Footer } from "components/Footer";
 import { Hero } from "components/Hero";
 import { AboutSection } from "components/sections/About";
 import { ExperienceSection } from "components/sections/Experience";
@@ -28,8 +27,6 @@ export default function Home() {
       {sections.map((Section, index) => (
         <Section key={index} className={styles.section} />
       ))}
-
-      <Footer className={styles.footer} />
     </div>
   );
 }

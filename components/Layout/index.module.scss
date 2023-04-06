@@ -1,7 +1,13 @@
 @use "styles/utils/mixins";
+@use "styles/utils/variables";
+@use "styles/utils/functions";
 
 .main {
   @include mixins.flex-column;
 
   flex: 1;
+}
+
+.footer {
+  margin-top: functions.to-rem(variables.$spacing-3xl * 3);
 }
