@@ -1,5 +1,6 @@
 @use "styles/utils/variables";
 @use "styles/utils/colors";
+@use "sass:color";
 
 .button {
   padding: variables.$spacing-xs variables.$spacing-sm;
@@ -9,7 +10,15 @@
   background-color: colors.$green-600;
   border: 1px solid colors.$green-600;
   border-radius: 8px;
+  box-shadow: 0 0 0 transparent;
   cursor: pointer;
+  transition: box-shadow 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+  &:hover,
+  &:focus,
+  &:active {
+    box-shadow: 0 0 4px color.adjust(colors.$green-600, $alpha: -0.2);
+  }
 
   &.isOutline {
     background-color: transparent;
