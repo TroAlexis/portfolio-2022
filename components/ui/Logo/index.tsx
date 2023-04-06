@@ -11,7 +11,7 @@ type Props = Partial<ComponentProps<typeof Link>>;
 export const Logo: FC<Props> = ({ className, ...props }) => {
   const classes = clsx(className, styles.link, visueltPro.className);
   return (
-    <Link href={"#"} className={classes} {...props}>
+    <Link href={"/"} className={classes} {...props}>
       troshin.
     </Link>
   );

@@ -2,12 +2,12 @@ import clsx from "clsx";
 import { ProjectCard } from "components/ProjectCard";
 import React, { ComponentProps, FC } from "react";
 
-import { Project } from "@/types/data";
+import { ProjectCardInfo } from "@/types/project";
 
 import styles from "./index.module.scss";
 
 interface Props extends ComponentProps<"ul"> {
-  items: Project[];
+  items: ProjectCardInfo[];
 }
 
 export const ProjectList: FC<Props> = ({ className, items, ...props }) => {

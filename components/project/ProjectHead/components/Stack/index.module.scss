@@ -1,0 +1,20 @@
+@use "styles/utils/variables";
+@use "styles/utils/functions";
+
+.wrapper {
+  display: flex;
+}
+
+.stack {
+  letter-spacing: 0.4px;
+}
+
+.list {
+  display: flex;
+  list-style: initial;
+  list-style-position: inside;
+}
+
+.item {
+  margin-left: functions.to-rem(variables.$spacing-sm);
+}

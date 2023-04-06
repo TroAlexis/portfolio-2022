@@ -1,0 +1,35 @@
+@use "styles/utils/variables";
+@use "styles/utils/functions";
+
+.head {
+  display: flex;
+  flex-direction: column;
+  padding-top: functions.to-rem(variables.$spacing-3xl * 2);
+}
+
+.title {
+  margin-bottom: functions.to-rem(variables.$spacing-2xl);
+  text-align: center;
+
+  &::after {
+    align-self: center;
+  }
+}
+
+.image {
+  align-self: center;
+  max-width: 75%;
+}
+
+.description {
+  line-height: 1.5;
+
+  & + & {
+    margin-top: functions.to-rem(variables.$spacing-sm);
+  }
+}
+
+.stack {
+  margin-top: functions.to-rem(variables.$spacing-lg);
+  margin-bottom: functions.to-rem(variables.$spacing-lg);
+}

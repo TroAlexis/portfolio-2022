@@ -17,7 +17,7 @@ const getSectionProps = (
   return {
     ...props,
     id: section.id,
-    href: `#${section.id}`,
+    href: `/#${section.id}`,
   };
 };
 
