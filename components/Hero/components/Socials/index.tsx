@@ -1,7 +1,6 @@
+import { socials } from "assets/data/socials";
 import clsx from "clsx";
 import React, { ComponentProps, FC } from "react";
-
-import { socials } from "@/constants/socials";
 
 import styles from "./index.module.scss";
 

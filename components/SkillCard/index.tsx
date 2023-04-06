@@ -1,3 +1,4 @@
+import { Skills } from "assets/data/skills";
 import clsx from "clsx";
 import { useActive, UseHoverOptions } from "components/Hero/hooks/useActive";
 import { SkillCardIcon } from "components/SkillCard/Icon";
@@ -5,7 +6,6 @@ import { Text } from "components/ui/Text";
 import React, { ComponentPropsWithoutRef, FC, useMemo } from "react";
 
 import { visueltPro } from "@/config/next/fonts";
-import { Skills } from "@/constants/skills";
 import { PolymorphicComponentProps } from "@/types/types";
 
 import styles from "./index.module.scss";

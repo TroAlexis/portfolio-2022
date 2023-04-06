@@ -1,8 +1,7 @@
+import { socials } from "assets/data/socials";
 import clsx from "clsx";
 import { FooterLink } from "components/Footer/components/Link";
 import React, { ComponentProps, FC } from "react";
-
-import { socials } from "@/constants/socials";
 
 import styles from "./index.module.scss";
 

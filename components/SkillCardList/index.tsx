@@ -1,8 +1,7 @@
+import { Skills, skills } from "assets/data/skills";
 import clsx from "clsx";
 import { SkillCard } from "components/SkillCard";
 import React, { ComponentProps, FC } from "react";
-
-import { Skills, skills } from "@/constants/skills";
 
 import styles from "./index.module.scss";
 
