@@ -1,4 +1,34 @@
+@use "breakpoints";
+@use "sass:map";
+
 @mixin flex-column {
   display: flex;
   flex-direction: column;
+}
+
+@mixin media-min($name) {
+  $breakpoint: map.get(breakpoints.$breakpoints, $name);
+  @if $breakpoint == all {
+    @media screen {
+      @content;
+    }
+  } @else if $breakpoint != all {
+    @media screen and (min-width: $breakpoint) {
+      @content;
+    }
+  }
+}
+
+@mixin media-max($name) {
+  $breakpoint: map.get(breakpoints.$breakpoints, $name);
+
+  @if $breakpoint == all {
+    @media screen {
+      @content;
+    }
+  } @else if $breakpoint != all {
+    @media screen and (max-width: $breakpoint - 1px) {
+      @content;
+    }
+  }
 }
