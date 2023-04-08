@@ -9,7 +9,12 @@
 
 .container {
   display: flex;
+  gap: functions.to-rem(variables.$spacing-2xl);
   align-items: center;
+
+  @include mixins.media-max("md") {
+    justify-content: space-between;
+  }
 }
 
 .logo,
@@ -17,6 +22,35 @@
   flex-basis: 25%;
 }
 
+.buttons {
+  white-space: nowrap;
+  @include mixins.media-max("md") {
+    order: 2;
+  }
+}
+
+.logo {
+  @include mixins.media-max("md") {
+    display: none;
+  }
+}
+
 .links {
   flex-basis: 50%;
+  white-space: nowrap;
+
+  @include mixins.media-max("md") {
+    display: none;
+  }
+}
+
+.burger {
+  display: none;
+
+  @include mixins.media-max("md") {
+    display: block;
+    order: 1;
+    width: functions.to-rem(variables.$spacing-xl);
+    height: functions.to-rem(variables.$spacing-xl);
+  }
 }

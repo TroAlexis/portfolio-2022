@@ -1,3 +1,4 @@
+import { IconMenu2 } from "@tabler/icons-react";
 import { ActionButtons } from "components/main/ActionButtons";
 import { HeaderLinks } from "components/main/Header/components/Links";
 import styles from "components/main/Header/index.module.scss";
@@ -16,6 +17,8 @@ export const Header: FC = () => {
           <HeaderLinks />
         </div>
         <ActionButtons className={styles.buttons} />
+
+        <IconMenu2 className={styles.burger} />
       </Container>
     </header>
   );
