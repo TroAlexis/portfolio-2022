@@ -12,3 +12,5 @@ export const projectCardsMap: Partial<Record<ProjectSlug, ProjectCardInfo>> = {
   [ProjectSlug.VICTORIA]: victoriaCard,
   [ProjectSlug.LIGVA]: ligvaCard,
 };
+
+export const projects = Object.values(projectCardsMap);

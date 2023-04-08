@@ -20,6 +20,7 @@ export const ligvaProject: Project = {
 };
 
 export const ligvaCard: ProjectCardInfo = {
+  id: ProjectSlug.LIGVA,
   name: "Ligva",
   cover: LigvaCover,
   description:

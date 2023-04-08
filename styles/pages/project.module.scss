@@ -15,3 +15,12 @@
     content: "";
   }
 }
+
+.heading {
+  margin-top: functions.to-rem(variables.$spacing-3xl * 2);
+  margin-bottom: functions.to-rem(variables.$spacing-3xl);
+}
+
+.footer {
+  margin-top: functions.to-rem(variables.$spacing-3xl * 2);
+}

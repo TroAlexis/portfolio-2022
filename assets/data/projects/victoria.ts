@@ -54,6 +54,7 @@ export const victoriaProject: Project = {
 };
 
 export const victoriaCard: ProjectCardInfo = {
+  id: ProjectSlug.VICTORIA,
   name: "V-Victoria",
   cover: VictoriaCover,
   description:

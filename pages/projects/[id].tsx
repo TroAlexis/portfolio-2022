@@ -1,6 +1,9 @@
-import { projectsMap } from "assets/data/projects";
+import { projects as allProjects, projectsMap } from "assets/data/projects";
+import { LetsTalkSection } from "components/main/sections/LetsTalk";
 import { ProjectBody } from "components/project/ProjectBody";
+import { ProjectList } from "components/project/ProjectCardList";
 import { ProjectHead } from "components/project/ProjectHead";
+import { Heading } from "components/ui/Heading";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
@@ -15,14 +18,18 @@ export default function ProjectPage() {
   const project = projectsMap[slug];
 
   useEffect(() => {
-    if (id && !project) {
+    const hasNoProject = slug && !project;
+
+    if (hasNoProject || !slug) {
       router.push("/");
     }
-  }, [id, project, router]);
+  }, [slug, project, router]);
 
   if (!project) {
     return null;
   }
+
+  const projects = allProjects.filter((project) => project.id !== slug);
 
   return (
     <div className={styles.page}>
@@ -33,7 +40,14 @@ export default function ProjectPage() {
 
       <ProjectHead project={project} className={styles.head} />
 
-      <ProjectBody project={project} />
+      <ProjectBody project={project}>
+        <Heading as={"h3"} preset={"h3"} hr className={styles.heading}>
+          Other Work
+        </Heading>
+        <ProjectList items={projects} />
+
+        <LetsTalkSection className={styles.footer} />
+      </ProjectBody>
     </div>
   );
 }

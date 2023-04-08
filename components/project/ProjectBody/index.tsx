@@ -1,16 +1,16 @@
 import { ProjectParagraph } from "components/project/ProjectParagraph";
 import { Container } from "components/ui/Container";
-import React, { FC } from "react";
+import React, { ComponentProps, FC } from "react";
 
 import { Project } from "@/types/project";
 
 import styles from "./index.module.scss";
 
-interface Props {
+interface Props extends ComponentProps<typeof Container> {
   project: Project;
 }
 
-export const ProjectBody: FC<Props> = ({ project }) => {
+export const ProjectBody: FC<Props> = ({ project, children, ...props }) => {
   const { paragraphs } = project;
   return (
     <Container>
@@ -21,6 +21,8 @@ export const ProjectBody: FC<Props> = ({ project }) => {
           className={styles.paragraph}
         />
       ))}
+
+      {children}
     </Container>
   );
 };

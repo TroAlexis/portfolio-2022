@@ -1,5 +1,7 @@
 import { StaticImageData } from "next/image";
 
+import { ProjectSlug } from "@/constants/projects";
+
 export type Project = {
   id: string;
   title: string;
@@ -30,6 +32,7 @@ export type ProjectParagraph = {
 };
 
 export interface ProjectCardInfo {
+  id?: ProjectSlug;
   name: string;
   description: string;
   cover: string | StaticImageData;
