@@ -1,5 +1,6 @@
 @use "styles/utils/variables";
 @use "styles/utils/functions";
+@use "styles/utils/mixins";
 
 $heading: h;
 $description: d;
@@ -11,6 +12,10 @@ $image: i;
     functions.to-rem(variables.$spacing-2xl);
   grid-template-rows: auto 1fr 1fr;
   grid-template-columns: repeat(4, 1fr);
+
+  @include mixins.media-max("md") {
+    @include mixins.flex-column;
+  }
 
   &.ltr {
     grid-template-areas: "#{$heading} #{$heading} #{$image} #{$image}""#{$description} #{$description} #{$image} #{$image}""#{$description} #{$description} #{$image} #{$image}";
