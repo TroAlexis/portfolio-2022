@@ -1,8 +1,10 @@
 @use "styles/utils/variables";
+@use "styles/utils/mixins";
+@use "styles/utils/functions";
 
 .wrapper {
-  padding-top: variables.$spacing-xl;
-  padding-bottom: variables.$spacing-xl;
+  padding-top: functions.to-rem(variables.$spacing-xl);
+  padding-bottom: functions.to-rem(variables.$spacing-xl);
 }
 
 .container {
