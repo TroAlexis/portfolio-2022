@@ -22,7 +22,7 @@ export const victoriaProject: Project = {
     "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque quam quas tempore unde veritatis! Consequatur culpa fuga inventore nesciunt omnis quia repellat soluta, tempore voluptas. Autem expedita iusto laborum officiis?",
   ],
   links: [
-    { label: "read more", accent: true, href: "/" },
+    { label: "view live", accent: true, href: "/" },
     { label: "view code", href: "/" },
   ],
   paragraphs: [

@@ -8,7 +8,7 @@ import styles from "styles/pages/project.module.scss";
 
 import { ProjectSlug } from "@/constants/projects";
 
-export default function Projects() {
+export default function ProjectPage() {
   const router = useRouter();
   const { id = "" } = router.query;
   const slug = id as ProjectSlug;
