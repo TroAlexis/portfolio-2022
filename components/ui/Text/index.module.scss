@@ -1,6 +1,8 @@
 @use "styles/utils/functions";
 @use "styles/utils/colors";
 @use "styles/utils/variables";
+@use "styles/utils/mixins";
+@use "sass:map";
 
 .text {
   color: inherit;
@@ -13,6 +15,15 @@
 @each $variant, $size in variables.$font-sizes {
   .size-#{$variant} {
     font-size: functions.to-rem($size);
+
+    $media-sizes: map.get(variables.$font-sizes-responsive, $variant);
+    @if $media-sizes {
+      @each $breakpoint, $size in $media-sizes {
+        @include mixins.media-max($breakpoint) {
+          font-size: functions.to-rem($size);
+        }
+      }
+    }
   }
 }
 
