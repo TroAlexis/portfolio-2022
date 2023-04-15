@@ -28,8 +28,12 @@ $bottom-spacing: variables.$spacing-3xl * 2;
 }
 
 .socials {
-  margin-top: variables.$spacing-lg;
-  margin-bottom: $bottom-spacing;
+  margin-top: functions.to-rem(variables.$spacing-lg);
+  margin-bottom: functions.to-rem($bottom-spacing);
+
+  @include mixins.media-max("md") {
+    margin-bottom: functions.to-rem($bottom-spacing / 4);
+  }
 }
 
 .image {
