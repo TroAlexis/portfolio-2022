@@ -1,5 +1,6 @@
 @use "styles/utils/mixins";
 @use "styles/utils/variables";
+@use "styles/utils/functions";
 
 .text {
   @include mixins.flex-column;
@@ -9,6 +10,18 @@
 
 .heading {
   letter-spacing: 0.0075em;
+
+  @include mixins.media-max("xl") {
+    font-size: functions.to-rem(variables.$font-size-2xl);
+  }
+
+  @include mixins.media-max("md") {
+    font-size: functions.to-rem(variables.$font-size-xl);
+  }
+
+  @include mixins.media-max("sm") {
+    font-size: functions.to-rem(variables.$font-size-lg);
+  }
 }
 
 .heading,
@@ -16,6 +29,28 @@
   margin-bottom: variables.$spacing-sm;
 }
 
+.subheading {
+  @include mixins.media-max("xl") {
+    font-size: functions.to-rem(variables.$font-size-xl);
+  }
+
+  @include mixins.media-max("md") {
+    font-size: functions.to-rem(variables.$font-size-3lg);
+  }
+
+  @include mixins.media-max("sm") {
+    font-size: functions.to-rem(variables.$font-size-md);
+  }
+}
+
 .description {
   line-height: 1.5;
+
+  @include mixins.media-max("lg") {
+    font-size: functions.to-rem(variables.$font-size-md);
+  }
+
+  @include mixins.media-max("sm") {
+    font-size: functions.to-rem(variables.$font-size-xs);
+  }
 }

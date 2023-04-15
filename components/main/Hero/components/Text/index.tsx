@@ -11,9 +11,9 @@ export const HeroText: FC<Props> = ({ className, ...props }) => {
   return (
     <div className={classes} {...props}>
       <Heading as={"p"} preset={"h1"} className={styles.heading}>
-        Hey there! I’m{" "}
+        Hey there! I’m&nbsp;
         <Text as={"span"} accent size={undefined}>
-          Alex Troshin
+          Alex&nbsp;Troshin
         </Text>
       </Heading>
       <Heading as={"h1"} preset={"h2"} className={styles.subheading}>
@@ -27,8 +27,8 @@ export const HeroText: FC<Props> = ({ className, ...props }) => {
         , everyway{" "}
         <Text as={"span"} accent>
           responsive
-        </Text>{" "}
-        web apps
+        </Text>
+        &nbsp;web&nbsp;apps
       </Text>
       <Text as={"p"} className={styles.description}>
         and bringing ideas to life with{" "}

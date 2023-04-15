@@ -18,8 +18,8 @@ export const Hero: FC<Props> = ({ className, ...props }) => {
     <section className={classes} {...props}>
       <Container className={styles.container}>
         <HeroText className={styles.text} />
-        <HeroSocials className={styles.socials} />
         <HeroImage className={styles.image} />
+        <HeroSocials className={styles.socials} />
       </Container>
     </section>
   );

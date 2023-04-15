@@ -13,10 +13,18 @@ $bottom-spacing: variables.$spacing-3xl * 2;
 
   position: relative;
   flex: 1;
+
+  @include mixins.media-max("sm") {
+    justify-content: space-between;
+  }
 }
 
 .text {
   flex: 1;
+
+  @include mixins.media-max("sm") {
+    flex: 0 1 auto;
+  }
 }
 
 .socials {
@@ -27,6 +35,19 @@ $bottom-spacing: variables.$spacing-3xl * 2;
 .image {
   &#{&} {
     position: absolute;
+
+    @include mixins.media-max("lg") {
+      position: static;
+      align-self: center;
+      margin-top: functions.to-rem(variables.$spacing-3xl);
+      margin-bottom: functions.to-rem(variables.$spacing-3xl);
+      transform: translateX(4%);
+    }
+
+    @include mixins.media-max("md") {
+      width: max-content;
+      transform: none;
+    }
   }
 
   right: functions.to-rem(-90px);
