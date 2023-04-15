@@ -2,31 +2,43 @@
 @use "styles/utils/functions";
 @use "styles/utils/mixins";
 
+$background-svg: '<svg viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.6008 6.08178L2.38859 9.77312L0.786642 7.86399L12.2172 3.79002L13.2366 5.00492L11.6008 6.08178ZM6.02938 14.112L11.2593 5.67482L12.5888 4.23289L13.6183 5.45975L7.63635 16.0272L6.02938 14.112ZM9.18271 11.2825L7.7763 12.4626L3.91455 7.86038L5.32096 6.68026L9.18271 11.2825Z" fill="rgb(0 48 61 / 20%)"/></svg>';
+
 .page {
   @include mixins.flex-column;
 
   flex: 1;
 
-  &::after {
-    position: absolute;
-    top: -30vw;
-    left: 70vw;
+  &::before {
+    position: fixed;
+    top: 0;
+    left: 0;
     z-index: -1;
     display: block;
-    height: 0;
-    max-height: 0;
-    color: rgb(0 48 61 / 30%);
-    font-weight: 700;
-    font-size: 175vw;
-    letter-spacing: 0.0075em;
-    transform: rotate(50deg);
-    content: "A";
+    width: 100vw;
+    height: 100vh;
+    min-height: 650px;
+    background-image: functions.svg-url($background-svg);
+    background-repeat: no-repeat;
+    background-position: 45%;
+    background-size: 200%;
+    content: "";
   }
 }
 
 .hero {
   height: calc(var(--hero-height, 1vh) * 100);
   min-height: 650px;
+
+  @include mixins.media-max("lg") {
+    height: auto;
+    min-height: calc(var(--hero-height, 1vh) * 100);
+    margin-top: functions.to-rem(variables.$spacing-3xl * 2);
+  }
+
+  @include mixins.media-max("sm") {
+    margin-top: functions.to-rem(variables.$spacing-2xl);
+  }
 }
 
 .section {
