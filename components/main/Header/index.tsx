@@ -1,7 +1,7 @@
-import { IconMenu2 } from "@tabler/icons-react";
 import { ActionButtons } from "components/main/ActionButtons";
 import { HeaderLinks } from "components/main/Header/components/Links";
 import styles from "components/main/Header/index.module.scss";
+import Burger from "components/ui/Burger";
 import { Container } from "components/ui/Container";
 import { Logo } from "components/ui/Logo";
 import { FC } from "react";
@@ -18,7 +18,7 @@ export const Header: FC = () => {
         </div>
         <ActionButtons className={styles.buttons} />
 
-        <IconMenu2 className={styles.burger} />
+        <Burger className={styles.burger} />
       </Container>
     </header>
   );

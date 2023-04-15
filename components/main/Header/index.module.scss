@@ -50,7 +50,5 @@
   @include mixins.media-max("md") {
     display: block;
     order: 1;
-    width: functions.to-rem(variables.$spacing-xl);
-    height: functions.to-rem(variables.$spacing-xl);
   }
 }
