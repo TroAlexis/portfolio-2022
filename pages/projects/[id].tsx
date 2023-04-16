@@ -18,9 +18,9 @@ export default function ProjectPage() {
   const project = projectsMap[slug];
 
   useEffect(() => {
-    const hasNoProject = slug && !project;
+    const hasNoProject = !!slug && !project;
 
-    if (hasNoProject || !slug) {
+    if (hasNoProject) {
       router.push("/");
     }
   }, [slug, project, router]);
