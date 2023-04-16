@@ -1,6 +1,7 @@
 @use "~modern-normalize" as normalize;
 @use "styles/utils/mixins";
 @use "styles/utils/colors";
+@use "styles/animations";
 
 html,
 body {

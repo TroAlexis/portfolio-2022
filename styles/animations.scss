@@ -1,0 +1,42 @@
+/* stylelint-disable selector-class-pattern */
+.drawer-enter {
+  transform: translate3d(-50px, 0, 0);
+  opacity: 0;
+}
+
+.drawer-enter-active {
+  transform: translateX(0);
+  transform-origin: right center;
+  opacity: 1;
+  transition: transform 0.2s ease-out, opacity 0.2s linear;
+}
+
+.drawer-exit {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.drawer-exit-active {
+  transform: translate3d(-50px, 0, 0);
+  transform-origin: right center;
+  opacity: 0;
+  transition: transform 0.2s ease-out, opacity 0.2s linear;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 0.2s linear;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 0.2s linear;
+}
