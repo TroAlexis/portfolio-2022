@@ -8,7 +8,9 @@ import React, { ComponentProps, FC } from "react";
 
 import { ProjectCardInfo } from "@/types/project";
 
-interface Props extends ComponentProps<"article">, ProjectCardInfo {}
+interface Props
+  extends Omit<ComponentProps<"article">, "id">,
+    ProjectCardInfo {}
 
 export const ProjectCard: FC<Props> = ({
   className,
