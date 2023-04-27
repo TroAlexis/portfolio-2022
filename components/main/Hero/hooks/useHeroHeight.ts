@@ -21,8 +21,9 @@ const setVhProperty = (lastVh: MutableRefObject<number | null>) => {
   const heroHeight = vh - headerHeight;
 
   setDocumentCSSProperty("--header-height", `${headerHeight}px`);
+  setDocumentCSSProperty("--vh", `${vh}px`);
+
   if (!lastVh.current || Math.abs(lastVh.current - vh) > 1) {
-    setDocumentCSSProperty("--vh", `${vh}px`);
     setDocumentCSSProperty("--hero-height", `${heroHeight}px`);
 
     lastVh.current = vh;

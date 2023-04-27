@@ -1,3 +1,11 @@
+export const setElementCSSProperty = (
+  element: HTMLElement,
+  property: string,
+  value?: string
+) => {
+  element.style.setProperty(property, value || "");
+};
+
 export const setDocumentCSSProperty = (property: string, value?: string) => {
-  document.documentElement.style.setProperty(property, value || "");
+  setElementCSSProperty(document.documentElement, property, value);
 };
