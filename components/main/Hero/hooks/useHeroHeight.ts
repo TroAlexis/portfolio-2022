@@ -1,6 +1,8 @@
 import headerStyles from "components/main/Header/index.module.scss";
-import { debounce } from "debounce";
-import { useEffect } from "react";
+import { MutableRefObject, useEffect, useRef } from "react";
+import { debounce } from "throttle-debounce";
+
+import { setDocumentCSSProperty } from "@/utils/dom";
 
 const getVh = () => {
   return window.innerHeight * 0.01;
@@ -13,22 +15,26 @@ const getHeaderHeight = () => {
   return headerHeight * 0.01;
 };
 
-const setVhProperty = () => {
+const setVhProperty = (lastVh: MutableRefObject<number | null>) => {
   const vh = getVh();
   const headerHeight = getHeaderHeight();
   const heroHeight = vh - headerHeight;
 
-  document.documentElement.style.setProperty(
-    "--hero-height",
-    `${heroHeight}px`
-  );
+  setDocumentCSSProperty("--header-height", `${headerHeight}px`);
+  if (!lastVh.current || Math.abs(lastVh.current - vh) > 1) {
+    setDocumentCSSProperty("--vh", `${vh}px`);
+    setDocumentCSSProperty("--hero-height", `${heroHeight}px`);
+
+    lastVh.current = vh;
+  }
 };
 
 export const useHeroHeight = () => {
+  const lastVh = useRef<number>(null);
   useEffect(() => {
-    setVhProperty();
+    setVhProperty(lastVh);
 
-    const listener = debounce(setVhProperty, 50);
+    const listener = debounce(50, () => setVhProperty(lastVh));
 
     window.addEventListener("resize", listener);
 
