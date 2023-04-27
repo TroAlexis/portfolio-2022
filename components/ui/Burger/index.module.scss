@@ -27,7 +27,7 @@
 }
 
 .burger {
-  transform: scale(1.5);
+  transform: scale(2);
 
   .line {
     transition: stroke-dasharray 400ms 100ms, stroke-dashoffset 400ms 100ms,
@@ -64,7 +64,7 @@
   transition: transform 400ms 50ms;
 
   .active & {
-    transform: scale(1.5);
+    transform: scale(2);
     transition: transform 400ms 50ms;
   }
 }

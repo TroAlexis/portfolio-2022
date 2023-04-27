@@ -1,9 +1,15 @@
 @use "styles/utils/variables";
+@use "styles/utils/functions";
 
 .link {
+  display: inline-flex;
   color: inherit;
   font-weight: 900;
   font-size: variables.$font-size-lg;
   letter-spacing: -2px;
   text-decoration: none;
+
+  svg {
+    height: functions.to-rem(variables.$font-size-3lg);
+  }
 }

@@ -51,6 +51,6 @@
   }
 
   @include mixins.media-max("sm") {
-    font-size: functions.to-rem(variables.$font-size-xs);
+    font-size: functions.to-rem(variables.$font-size-sm);
   }
 }

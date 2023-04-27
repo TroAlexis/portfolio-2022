@@ -1,3 +1,4 @@
+import LogoSvg from "assets/svg/logo.svg";
 import clsx from "clsx";
 import { Link } from "components/ui/Link";
 import { ComponentProps, FC } from "react";
@@ -12,7 +13,7 @@ export const Logo: FC<Props> = ({ className, ...props }) => {
   const classes = clsx(className, styles.link, visueltPro.className);
   return (
     <Link href={"/"} className={classes} {...props}>
-      troshin.
+      <LogoSvg />
     </Link>
   );
 };
