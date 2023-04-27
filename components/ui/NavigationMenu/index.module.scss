@@ -1,0 +1,38 @@
+@use "styles/utils/colors";
+@use "sass:color";
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  background: color.adjust(colors.$bg-default, $alpha: -0.2);
+  backdrop-filter: blur(12px);
+  content: "";
+}
+
+.nav {
+  position: relative;
+  z-index: 1;
+  width: 80vw;
+  height: calc(var(--vh, 1vh) * 100);
+  background: color.adjust(colors.$bg-default, $alpha: -0.2);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-top: calc(var(--header-height, 0.8px) * 100 + 2rem);
+}

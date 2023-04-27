@@ -8,7 +8,9 @@ import { ComponentProps, FC } from "react";
 
 import { APP_SECTIONS } from "@/config/app/sections";
 
-export type HeaderLinksProps = ComponentProps<"ul">;
+export type HeaderLinksProps = ComponentProps<"ul"> & {
+  onLinkClick?: (e: Event) => unknown;
+};
 
 const getSectionProps = (
   name: keyof typeof APP_SECTIONS,
@@ -30,12 +32,16 @@ const links: HeaderLinkProps[] = [
   getSectionProps("experience", { children: "Experience" }),
 ];
 
-export const HeaderLinks: FC<HeaderLinksProps> = ({ className, ...props }) => {
+export const HeaderLinks: FC<HeaderLinksProps> = ({
+  className,
+  onLinkClick,
+  ...props
+}) => {
   const classes = clsx(className, styles.list);
   return (
     <ul className={classes} {...props}>
       {links.map(({ id, ...link }) => (
-        <HeaderLink {...link} key={id} />
+        <HeaderLink {...link} key={id} onClick={onLinkClick} />
       ))}
     </ul>
   );

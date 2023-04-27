@@ -1,3 +1,13 @@
+@use "styles/utils/mixins";
+@use "styles/utils/functions";
+@use "styles/utils/variables";
+@use "styles/utils/colors";
+
 .link {
-  /* TODO header link styling */
+  @include mixins.media-max("md") {
+    display: flex;
+    align-items: center;
+    font-size: functions.to-rem(variables.$font-size-md);
+    text-transform: uppercase;
+  }
 }

@@ -1,7 +1,15 @@
 @use "styles/utils/variables";
+@use "styles/utils/mixins";
+@use "styles/utils/functions";
 
 .list {
   display: flex;
-  gap: variables.$spacing-3xl;
+  gap: functions.to-rem(variables.$spacing-3xl);
   justify-content: center;
+
+  @include mixins.media-max("md") {
+    flex-direction: column;
+    gap: functions.to-rem(variables.$spacing-3xl);
+    align-items: flex-start;
+  }
 }

@@ -1,6 +1,8 @@
 import { clearAllBodyScrollLocks, disableBodyScroll } from "body-scroll-lock";
 import React, { RefObject, useCallback, useEffect } from "react";
 
+import { setDocumentCSSProperty } from "@/utils/dom";
+
 interface Props<T extends HTMLElement> {
   targetRef: RefObject<T>;
 }
@@ -19,14 +21,13 @@ export const BodyScrollLocker = <T extends HTMLElement>({
   );
 
   useEffect(() => {
-    const htmlElement = document.documentElement;
     ifTarget((target: T) => {
       disableBodyScroll(target);
-      htmlElement.style.overflow = "hidden";
+      setDocumentCSSProperty("overflow", "hidden");
     });
 
     return () => {
-      htmlElement.style.overflow = "";
+      setDocumentCSSProperty("overflow", "");
       clearAllBodyScrollLocks();
     };
   }, [ifTarget]);

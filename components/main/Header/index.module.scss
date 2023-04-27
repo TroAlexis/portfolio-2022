@@ -1,10 +1,32 @@
 @use "styles/utils/variables";
 @use "styles/utils/mixins";
 @use "styles/utils/functions";
+@use "styles/utils/colors";
+@use "sass:color";
 
 .wrapper {
-  padding-top: functions.to-rem(variables.$spacing-xl);
-  padding-bottom: functions.to-rem(variables.$spacing-xl);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  width: 100%;
+  padding-top: functions.to-rem(variables.$spacing-sm);
+  padding-bottom: functions.to-rem(variables.$spacing-sm);
+  background: color.adjust(colors.$bg-default, $alpha: -0.2);
+  backdrop-filter: blur(12px);
+
+  &.transparent {
+    background: transparent;
+    backdrop-filter: none;
+    transition: background-color 0.4s ease;
+  }
+
+  &.open {
+    background: transparent;
+    backdrop-filter: none;
+    transition-delay: 0.2s;
+    pointer-events: none;
+  }
 }
 
 .container {
@@ -26,6 +48,14 @@
   white-space: nowrap;
   @include mixins.media-max("md") {
     order: 2;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.2s linear, visibility 0.2s linear;
+  }
+
+  .open & {
+    visibility: hidden;
+    opacity: 0;
   }
 }
 
@@ -48,7 +78,16 @@
   display: none;
 
   @include mixins.media-max("md") {
+    position: relative;
+    z-index: 11;
     display: block;
     order: 1;
+    pointer-events: auto;
+  }
+}
+
+.menu {
+  @include mixins.media-min("md") {
+    display: none;
   }
 }

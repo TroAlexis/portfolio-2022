@@ -32,12 +32,12 @@ $background-svg: '<svg viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/
 
   @include mixins.media-max("lg") {
     height: auto;
-    min-height: calc(var(--hero-height, 1vh) * 100);
-    margin-top: functions.to-rem(variables.$spacing-3xl * 2);
+    min-height: calc((var(--hero-height, 1vh) * 100));
+    padding-top: functions.to-rem(variables.$spacing-3xl * 2);
   }
 
   @include mixins.media-max("sm") {
-    margin-top: functions.to-rem(variables.$spacing-2xl);
+    padding-top: functions.to-rem(variables.$spacing-2xl);
   }
 }
 

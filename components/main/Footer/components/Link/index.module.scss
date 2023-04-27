@@ -1,5 +1,6 @@
 @use "styles/utils/variables";
 @use "styles/utils/functions";
+@use "styles/utils/mixins";
 
 .wrapper {
   display: flex;
@@ -10,4 +11,10 @@
   width: functions.to-rem(variables.$spacing-xl);
   height: functions.to-rem(variables.$spacing-xl);
   margin-right: functions.to-rem(variables.$spacing-sm);
+}
+
+.text {
+  @include mixins.media-max("sm") {
+    display: none;
+  }
 }

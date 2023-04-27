@@ -20,7 +20,12 @@ export const FooterLink: FC<FooterLinkProps> = ({
     <Link plain className={classes} {...props}>
       <Icon className={styles.icon} />
       <Link<"span"> is={"span"}>
-        <Text as={"span"} family={visueltPro} size={"xs"}>
+        <Text
+          as={"span"}
+          className={styles.text}
+          family={visueltPro}
+          size={"xs"}
+        >
           {label}
         </Text>
       </Link>
