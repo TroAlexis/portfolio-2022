@@ -17,9 +17,12 @@ $container-spacing: functions.to-rem(variables.$container-spacing);
     width: 100vw;
     margin: 0 -$container-spacing;
     padding-right: $container-spacing;
+
+    // Padding for scrollbar
+    padding-bottom: functions.to-rem(variables.$spacing-md);
     padding-left: $container-spacing;
-    scroll-snap-type: x mandatory;
     overflow: auto;
+    scroll-snap-type: x mandatory;
   }
 }
 

@@ -34,7 +34,7 @@ $item-size: calc(50% - #{$spacing / 2});
 
   @include mixins.media-max("lg") {
     height: functions.to-rem(150px);
-    margin-top: $spacing;
+    margin-top: functions.to-rem(variables.$spacing-xl);
   }
 
   @include mixins.media-max("sm") {
