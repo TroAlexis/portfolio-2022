@@ -1,11 +1,41 @@
 @use "styles/utils/variables";
+@use "styles/utils/functions";
+@use "styles/utils/mixins";
 
 .list {
   display: flex;
   flex-wrap: wrap;
   gap: variables.$spacing-2xl;
+
+  @include mixins.media-max("md") {
+    flex-wrap: nowrap;
+    gap: variables.$spacing-lg;
+    margin-right: functions.to-rem(variables.$container-spacing * -1);
+    margin-left: functions.to-rem(variables.$container-spacing * -1);
+    padding-right: functions.to-rem(variables.$container-spacing);
+    padding-left: functions.to-rem(variables.$container-spacing);
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-padding: functions.to-rem(variables.$container-spacing);
+  }
+
+  @include mixins.media-max("sm") {
+    gap: functions.to-rem(variables.$spacing-md);
+  }
 }
 
 .item {
   flex: 0 1 calc(50% - #{variables.$spacing-2xl / 2});
+
+  @include mixins.media-max("md") {
+    flex-basis: 65vw;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
+
+  @include mixins.media-max("sm") {
+    flex-basis: 80vw;
+    flex-shrink: 0;
+  }
 }
