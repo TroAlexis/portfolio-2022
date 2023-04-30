@@ -7,7 +7,9 @@ import React, { ComponentProps, FC } from "react";
 import { visueltPro } from "@/config/next/fonts";
 import { Social } from "@/types/socials";
 
-export interface FooterLinkProps extends ComponentProps<typeof Link>, Social {}
+export interface FooterLinkProps
+  extends Omit<ComponentProps<typeof Link>, "icon">,
+    Social {}
 
 export const FooterLink: FC<FooterLinkProps> = ({
   icon: Icon,
@@ -18,7 +20,9 @@ export const FooterLink: FC<FooterLinkProps> = ({
   const classes = clsx(className, styles.wrapper);
   return (
     <Link plain className={classes} {...props}>
-      <Icon className={styles.icon} />
+      <Link<"span"> is={"span"} plain icon>
+        <Icon className={styles.icon} />
+      </Link>
       <Link<"span"> is={"span"}>
         <Text
           as={"span"}
