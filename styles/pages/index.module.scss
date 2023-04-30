@@ -46,5 +46,14 @@ $background-svg: '<svg viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/
 
   & + & {
     margin-top: variables.$spacing-lg * 3;
+
+    @include mixins.media-max("lg") {
+      margin-top: functions.to-rem(variables.$spacing-3xl);
+      padding-top: functions.to-rem(variables.$spacing-3xl);
+    }
+
+    @include mixins.media-max("md") {
+      margin-top: functions.to-rem(variables.$spacing-lg);
+    }
   }
 }
