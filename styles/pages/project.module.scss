@@ -1,6 +1,7 @@
 @use "styles/utils/colors";
 @use "styles/utils/variables";
 @use "styles/utils/functions";
+@use "styles/utils/mixins";
 
 .page {
   position: static;
@@ -23,4 +24,8 @@
 
 .footer {
   margin-top: functions.to-rem(variables.$spacing-3xl * 2);
+
+  @include mixins.media-max("sm") {
+    margin-top: functions.to-rem(variables.$spacing-3xl);
+  }
 }

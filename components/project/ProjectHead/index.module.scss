@@ -1,10 +1,19 @@
 @use "styles/utils/variables";
 @use "styles/utils/functions";
+@use "styles/utils/mixins";
 
 .head {
   display: flex;
   flex-direction: column;
   padding-top: functions.to-rem(variables.$spacing-3xl * 2);
+
+  @include mixins.media-max("lg") {
+    padding-top: functions.to-rem(variables.$spacing-3xl);
+  }
+
+  @include mixins.media-max("md") {
+    padding-top: functions.to-rem(variables.$spacing-lg);
+  }
 }
 
 .title {

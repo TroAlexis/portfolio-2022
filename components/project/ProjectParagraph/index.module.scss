@@ -49,7 +49,9 @@ $image: i;
 }
 
 .imageWrapper {
+  display: flex;
   grid-area: $image;
+  justify-content: center;
 }
 
 .image {

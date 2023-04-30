@@ -12,7 +12,7 @@
 .footer {
   margin-top: functions.to-rem(variables.$spacing-3xl * 3);
 
-  @include mixins.media-max("md") {
+  @include mixins.media-max("lg") {
     margin-top: functions.to-rem(variables.$spacing-3xl);
   }
 }

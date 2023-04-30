@@ -1,20 +1,45 @@
 @use "styles/utils/variables";
 @use "styles/utils/functions";
+@use "styles/utils/mixins";
 
 .wrapper {
   display: flex;
+  align-items: center;
+
+  @include mixins.media-max("md") {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.stack,
+.item > * {
+  @include mixins.media-max("md") {
+    font-size: functions.to-rem(variables.$font-size-sm);
+  }
 }
 
 .stack {
+  margin-right: functions.to-rem(variables.$spacing-sm);
   letter-spacing: 0.4px;
+
+  @include mixins.media-max("md") {
+    margin-bottom: functions.to-rem(variables.$spacing-xs);
+  }
 }
 
 .list {
   display: flex;
+  flex-wrap: wrap;
+  gap: functions.to-rem(variables.$spacing-sm);
   list-style: initial;
   list-style-position: inside;
 }
 
 .item {
-  margin-left: functions.to-rem(variables.$spacing-sm);
+  @include mixins.media-max("md") {
+    &:first-child {
+      list-style: none;
+    }
+  }
 }

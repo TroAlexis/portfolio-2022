@@ -26,7 +26,13 @@ export const ProjectLinkSet: FC<Props> = ({
     <ul className={classes} {...props}>
       {links.map(({ href, label, accent }, index) => (
         <li key={href + index}>
-          <Text as={"span"} accent={accent} family={visueltPro} size={size}>
+          <Text
+            as={"span"}
+            accent={accent}
+            className={styles.text}
+            family={visueltPro}
+            size={size}
+          >
             <Link href={href} className={styles.link}>
               {label}
             </Link>

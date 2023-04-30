@@ -12,3 +12,9 @@
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
+
+.text {
+  @include mixins.media-max("sm") {
+    font-size: functions.to-rem(variables.$font-size-sm);
+  }
+}
