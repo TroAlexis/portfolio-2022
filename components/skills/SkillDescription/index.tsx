@@ -16,7 +16,7 @@ export const SkillDescription: FC<Props> = ({
   return (
     <ul className={classes} {...props}>
       {description.map((paragraph) => (
-        <li key={paragraph}>
+        <li key={paragraph} className={styles.item}>
           <Text as={"span"}>{paragraph};</Text>
         </li>
       ))}

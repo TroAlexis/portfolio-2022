@@ -1,19 +1,43 @@
 @use "styles/utils/variables";
 @use "styles/utils/functions";
+@use "styles/utils/mixins";
 
-$card-size: 90px;
+$card-size: 100px;
 $spacing: functions.to-rem(variables.$spacing-sm);
+$container-spacing: functions.to-rem(variables.$container-spacing);
 
 .list {
   display: flex;
   flex-wrap: wrap;
   margin: -$spacing / 2;
+
+  @include mixins.media-max("lg") {
+    flex-wrap: nowrap;
+    gap: $spacing;
+    width: 100vw;
+    margin: 0 -$container-spacing;
+    padding-right: $container-spacing;
+    padding-left: $container-spacing;
+    overflow: auto;
+  }
 }
 
 .item {
   display: flex;
+  flex-basis: calc(20% - #{$spacing});
   width: calc(20% - #{$spacing});
   margin: $spacing / 2;
+
+  @include mixins.media-max("xl") {
+    flex-basis: calc(25% - #{$spacing});
+    width: calc(25% - #{$spacing});
+  }
+
+  @include mixins.media-max("lg") {
+    flex: 1 0 functions.to-rem($card-size);
+    width: auto;
+    margin: 0;
+  }
 }
 
 .card {

@@ -1,5 +1,6 @@
 @use "styles/utils/variables";
 @use "styles/utils/functions";
+@use "styles/utils/mixins";
 
 $spacing: functions.to-rem(variables.$spacing-3xl);
 $item-size: calc(50% - #{$spacing / 2});
@@ -7,9 +8,36 @@ $item-size: calc(50% - #{$spacing / 2});
 .main {
   display: flex;
   justify-content: space-between;
+
+  @include mixins.media-max("lg") {
+    flex-direction: column;
+  }
 }
 
 .list,
 .description {
   flex-basis: $item-size;
+
+  @include mixins.media-max("lg") {
+    flex-basis: auto;
+  }
+}
+
+.list {
+  align-self: flex-start;
+}
+
+.description {
+  height: functions.to-rem(300px);
+  padding-left: functions.to-rem(variables.$spacing-md);
+  overflow-y: auto;
+
+  @include mixins.media-max("lg") {
+    height: functions.to-rem(150px);
+    margin-top: $spacing;
+  }
+
+  @include mixins.media-max("sm") {
+    height: functions.to-rem(200px);
+  }
 }

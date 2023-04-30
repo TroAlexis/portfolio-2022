@@ -1,4 +1,12 @@
+@use "styles/utils/colors";
+
 .list {
   line-height: 1.55;
   list-style: initial;
+}
+
+.item {
+  &::marker {
+    color: colors.$green-500;
+  }
 }
