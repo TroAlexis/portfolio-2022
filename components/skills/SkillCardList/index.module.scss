@@ -18,6 +18,7 @@ $container-spacing: functions.to-rem(variables.$container-spacing);
     margin: 0 -$container-spacing;
     padding-right: $container-spacing;
     padding-left: $container-spacing;
+    scroll-snap-type: x mandatory;
     overflow: auto;
   }
 }
@@ -37,6 +38,7 @@ $container-spacing: functions.to-rem(variables.$container-spacing);
     flex: 1 0 functions.to-rem($card-size);
     width: auto;
     margin: 0;
+    scroll-snap-align: center;
   }
 }
 
