@@ -5,7 +5,8 @@
 @use "sass:color";
 
 .button {
-  padding: variables.$spacing-xs variables.$spacing-sm;
+  padding: functions.to-rem(variables.$spacing-xs)
+    functions.to-rem(variables.$spacing-sm);
   color: inherit;
   font-weight: 500;
   text-shadow: 0 4px 6px rgb(33 37 41 / 20%), 0 0 1px rgb(33 37 41 / 32%);

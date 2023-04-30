@@ -3,9 +3,11 @@
 
 .container {
   width: 100%;
-  max-width: functions.get-container-width(variables.$container-width-lg);
+  max-width: functions.get-container-width(
+    functions.to-rem(variables.$container-width-lg)
+  );
   margin-right: auto;
   margin-left: auto;
-  padding-right: variables.$container-spacing;
-  padding-left: variables.$container-spacing;
+  padding-right: functions.to-rem(variables.$container-spacing);
+  padding-left: functions.to-rem(variables.$container-spacing);
 }

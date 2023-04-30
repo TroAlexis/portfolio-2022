@@ -17,7 +17,7 @@ $background-svg: '<svg viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/
     display: block;
     width: 100vw;
     height: 100vh;
-    min-height: 650px;
+    min-height: functions.to-rem(650px);
     background-image: functions.svg-url($background-svg);
     background-repeat: no-repeat;
     background-position: 45%;
@@ -28,7 +28,7 @@ $background-svg: '<svg viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/
 
 .hero {
   height: calc(var(--hero-height, 1vh) * 100);
-  min-height: 650px;
+  min-height: functions.to-rem(650px);
 
   @include mixins.media-max("lg") {
     height: auto;
@@ -42,10 +42,10 @@ $background-svg: '<svg viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/
 }
 
 .section {
-  padding-top: variables.$spacing-lg * 3;
+  padding-top: functions.to-rem(variables.$spacing-lg * 3);
 
   & + & {
-    margin-top: variables.$spacing-lg * 3;
+    margin-top: functions.to-rem(variables.$spacing-lg * 3);
 
     @include mixins.media-max("lg") {
       margin-top: functions.to-rem(variables.$spacing-3xl);

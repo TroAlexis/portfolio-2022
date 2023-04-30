@@ -4,7 +4,7 @@
 
 .socials {
   display: flex;
-  gap: variables.$spacing-3xl;
+  gap: functions.to-rem(variables.$spacing-3xl);
   align-items: center;
 
   &::before {

@@ -5,11 +5,11 @@
 .list {
   display: flex;
   flex-wrap: wrap;
-  gap: variables.$spacing-2xl;
+  gap: functions.to-rem(variables.$spacing-2xl);
 
   @include mixins.media-max("md") {
     flex-wrap: nowrap;
-    gap: variables.$spacing-lg;
+    gap: functions.to-rem(variables.$spacing-lg);
 
     // Negating container padding
     margin-right: functions.to-rem(variables.$container-spacing * -1);
@@ -31,7 +31,7 @@
 }
 
 .item {
-  flex: 0 1 calc(50% - #{variables.$spacing-2xl / 2});
+  flex: 0 1 calc(50% - #{functions.to-rem(variables.$spacing-2xl) / 2});
 
   @include mixins.media-max("md") {
     flex-basis: 65vw;

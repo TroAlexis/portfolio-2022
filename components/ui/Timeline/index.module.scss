@@ -1,8 +1,9 @@
 @use "styles/utils/variables";
 @use "styles/utils/mixins";
+@use "styles/utils/functions";
 
 .timeline {
   @include mixins.flex-column;
 
-  gap: variables.$spacing-xl;
+  gap: functions.to-rem(variables.$spacing-xl);
 }

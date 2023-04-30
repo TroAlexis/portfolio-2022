@@ -5,7 +5,7 @@
   display: inline-flex;
   color: inherit;
   font-weight: 900;
-  font-size: variables.$font-size-lg;
+  font-size: functions.to-rem(variables.$font-size-lg);
   letter-spacing: -2px;
   text-decoration: none;
 

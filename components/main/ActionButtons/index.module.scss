@@ -1,7 +1,8 @@
 @use "styles/utils/variables";
+@use "styles/utils/functions";
 
 .buttons {
   display: flex;
-  gap: variables.$spacing-sm;
+  gap: functions.to-rem(variables.$spacing-sm);
   align-items: center;
 }

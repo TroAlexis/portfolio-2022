@@ -1,5 +1,6 @@
 @use "styles/utils/variables";
 @use "styles/utils/mixins";
+@use "styles/utils/functions";
 
 .card {
   @include mixins.flex-column;
@@ -14,7 +15,7 @@
 
 .heading,
 .image {
-  margin-bottom: variables.$spacing-md;
+  margin-bottom: functions.to-rem(variables.$spacing-md);
 }
 
 .description {
@@ -22,5 +23,5 @@
 }
 
 .links {
-  margin-top: variables.$spacing-md;
+  margin-top: functions.to-rem(variables.$spacing-md);
 }
