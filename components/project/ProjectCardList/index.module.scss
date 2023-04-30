@@ -10,9 +10,14 @@
   @include mixins.media-max("md") {
     flex-wrap: nowrap;
     gap: variables.$spacing-lg;
+
+    // Negating container padding
     margin-right: functions.to-rem(variables.$container-spacing * -1);
     margin-left: functions.to-rem(variables.$container-spacing * -1);
     padding-right: functions.to-rem(variables.$container-spacing);
+
+    // Padding for scrollbar
+    padding-bottom: functions.to-rem(variables.$spacing-sm);
     padding-left: functions.to-rem(variables.$container-spacing);
     overflow-x: auto;
     overflow-y: hidden;
