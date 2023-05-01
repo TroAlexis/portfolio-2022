@@ -2,7 +2,10 @@
 @use "sass:string";
 @use "styles/utils/variables";
 
-@function get-container-width($width, $spacing: variables.$container-spacing) {
+@function get-container-width(
+  $width,
+  $spacing: to-rem(variables.$container-spacing)
+) {
   @return $width + $spacing * 2;
 }
 

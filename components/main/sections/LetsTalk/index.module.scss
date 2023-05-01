@@ -1,8 +1,16 @@
+@use "styles/utils/functions";
+@use "styles/utils/variables";
+@use "styles/utils/mixins";
+
 .section {
   text-align: center;
 }
 
 .heading {
+  @include mixins.media-max("md") {
+    margin-bottom: functions.to-rem(variables.$spacing-lg);
+  }
+
   &::after {
     align-self: center;
   }
