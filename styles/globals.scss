@@ -1,5 +1,6 @@
 @use "~modern-normalize" as normalize;
 @use "styles/utils/mixins";
+@use "styles/utils/variables";
 @use "styles/utils/colors";
 @use "styles/animations";
 
@@ -49,4 +50,14 @@ h4,
 h5,
 h6 {
   margin: 0;
+}
+
+a,
+button,
+div,
+input {
+  &:focus {
+    outline-color: colors.$green-500;
+    outline-offset: variables.$spacing-step;
+  }
 }
