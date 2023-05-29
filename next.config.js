@@ -1,8 +1,7 @@
 /** @type {import("next").NextConfig} */
-const basePath =
-  process.env.NODE_ENV === "development" ? "/random" : "/portfolio-2022";
 const nextConfig = {
-  basePath,
+  basePath:
+    process.env.NODE_ENV === "development" ? undefined : "/portfolio-2022",
   reactStrictMode: true,
   swcMinify: true,
   images: {
@@ -16,7 +15,7 @@ const nextConfig = {
     nextImageExportOptimizer_exportFolderPath: "out",
     nextImageExportOptimizer_quality: 85,
     nextImageExportOptimizer_storePicturesInWEBP: true,
-    nextImageExportOptimizer_exportFolderName: `${basePath}/optimised-images`,
+    nextImageExportOptimizer_exportFolderName: "optimised-images",
     nextImageExportOptimizer_generateAndUseBlurImages: true,
   },
   webpack(config) {
