@@ -28,6 +28,7 @@ export const Modal: FC<ModalProps> = ({
       ref={wrapperRef}
       className={modalClasses}
       overlayClassName={overlayClasses}
+      closeTimeoutMS={200}
       {...props}
     >
       <Button icon className={styles.close} onClick={props.onRequestClose}>

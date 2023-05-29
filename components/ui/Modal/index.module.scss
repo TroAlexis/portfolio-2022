@@ -32,6 +32,21 @@
   justify-content: center;
   background: color.adjust(colors.$bg-default, $alpha: -0.5);
   backdrop-filter: blur(12px);
+
+  /* stylelint-disable selector-class-pattern */
+  &:global(.ReactModal__Overlay) {
+    opacity: 0;
+    transition: opacity 200ms ease-in-out;
+  }
+
+  &:global(.ReactModal__Overlay--after-open) {
+    opacity: 1;
+  }
+
+  &:global(.ReactModal__Overlay--before-close) {
+    opacity: 0;
+  }
+  /* stylelint-enable selector-class-pattern */
 }
 
 .close {
