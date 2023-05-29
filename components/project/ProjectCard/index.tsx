@@ -3,7 +3,7 @@ import styles from "components/project/ProjectCard/index.module.scss";
 import { ProjectLinkSet } from "components/project/ProjectLinkSet";
 import { Heading } from "components/ui/Heading";
 import { Text } from "components/ui/Text";
-import Image from "next/image";
+import Image from "next-image-export-optimizer";
 import React, { ComponentProps, FC } from "react";
 
 import { ProjectCardInfo } from "@/types/project";

@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { Heading } from "components/ui/Heading";
 import { Text } from "components/ui/Text";
-import Image from "next/image";
+import Image from "next-image-export-optimizer";
 import React, { ComponentProps, FC } from "react";
 
 import { ProjectParagraph as ProjectParagraphType } from "@/types/project";
