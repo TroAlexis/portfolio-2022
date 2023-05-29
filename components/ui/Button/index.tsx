@@ -25,6 +25,7 @@ export const Button = <T extends ElementType = typeof DEFAULT_TAG>({
   const modifiers = {
     [styles.isOutline]: outline,
     [styles.isIcon]: icon,
+    [styles.isLink]: as === "a",
   };
   const classes = clsx(className, styles.button, modifiers);
 

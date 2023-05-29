@@ -35,4 +35,8 @@
     background-color: transparent;
     border: 0;
   }
+
+  &.isLink {
+    text-decoration: none;
+  }
 }
