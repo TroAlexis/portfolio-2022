@@ -28,15 +28,21 @@ export function useActive<T extends Element>(options: UseHoverOptions<T>) {
   const [value, setValue] = useState(false);
   const ref = useRef<T>(null);
 
-  const handleEnter = (event: Event) => {
-    setValue(true);
-    onEnter?.(event);
-  };
+  const handleEnter = useCallback(
+    (event: Event) => {
+      setValue(true);
+      onEnter?.(event);
+    },
+    [setValue, onEnter]
+  );
 
-  const handleLeave = (event: Event) => {
-    setValue(false);
-    onLeave?.(event);
-  };
+  const handleLeave = useCallback(
+    (event: Event) => {
+      setValue(false);
+      onLeave?.(event);
+    },
+    [setValue, onLeave]
+  );
 
   const events = useMemo(() => getEventsArray(triggers), [triggers]);
 
@@ -50,7 +56,7 @@ export function useActive<T extends Element>(options: UseHoverOptions<T>) {
         node[method](eventOut, handleLeave);
       });
     },
-    [events]
+    [events, handleEnter, handleLeave]
   );
 
   useEffect(
@@ -64,6 +70,7 @@ export function useActive<T extends Element>(options: UseHoverOptions<T>) {
         };
       }
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [updateListeners, ref.current] // Recall only if ref changes
   );
   return [ref, value] as const;
