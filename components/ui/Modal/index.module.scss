@@ -1,0 +1,47 @@
+@use "styles/utils/colors";
+@use "styles/utils/variables";
+@use "styles/utils/functions";
+@use "styles/utils/mixins";
+@use "sass:color";
+
+.modal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100% - #{functions.to-rem(variables.$spacing-lg)});
+  padding: functions.to-rem(variables.$spacing-2xl);
+  overflow: auto;
+  background-color: colors.$bg-default;
+  border-radius: variables.$border-radius;
+
+  @include mixins.media-max("md") {
+    padding-right: functions.to-rem(variables.$spacing-sm);
+    padding-left: functions.to-rem(variables.$spacing-sm);
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: color.adjust(colors.$bg-default, $alpha: -0.5);
+  backdrop-filter: blur(12px);
+}
+
+.close {
+  position: absolute;
+  top: functions.to-rem(variables.$spacing-step);
+  right: functions.to-rem(variables.$spacing-step);
+  display: flex;
+
+  & > svg {
+    width: functions.to-rem(variables.$spacing-xl);
+    height: functions.to-rem(variables.$spacing-xl);
+  }
+}

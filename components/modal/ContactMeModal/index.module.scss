@@ -1,0 +1,42 @@
+@use "styles/utils/variables";
+@use "styles/utils/functions";
+@use "styles/utils/mixins";
+
+.modal {
+  max-width: calc(
+    100vw - #{functions.to-rem(variables.$container-spacing * 2)}
+  );
+  box-shadow: variables.$shadow-image;
+
+  @include mixins.media-max("md") {
+    width: 70vw;
+  }
+
+  @include mixins.media-max("sm") {
+    width: 100%;
+  }
+}
+
+.form {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.header {
+  margin-bottom: functions.to-rem(variables.$spacing-2xl);
+}
+
+.input {
+  & + & {
+    margin-top: functions.to-rem(variables.$spacing-lg);
+  }
+}
+
+.buttons {
+  display: flex;
+}
+
+.button {
+  margin-top: functions.to-rem(variables.$spacing-lg);
+}

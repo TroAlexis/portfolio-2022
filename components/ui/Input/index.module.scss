@@ -1,0 +1,35 @@
+@use "styles/utils/colors";
+@use "styles/utils/variables";
+@use "styles/utils/functions";
+@use "styles/utils/mixins";
+
+.input {
+  padding: functions.to-rem(variables.$spacing-xs);
+  color: inherit;
+  font-size: inherit;
+  background-color: transparent;
+  border: 1px solid colors.$green-500;
+  border-radius: functions.to-rem(variables.$border-radius * 0.75);
+  outline: none;
+  transition: border-color 0.2s;
+
+  &:focus,
+  &:hover,
+  &:active {
+    border-color: colors.$green-100;
+  }
+}
+
+.textarea {
+  min-height: functions.to-rem(80px);
+  resize: none;
+}
+
+.label {
+  margin-bottom: functions.to-rem(variables.$spacing-xs);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}

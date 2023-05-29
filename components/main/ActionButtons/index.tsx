@@ -4,9 +4,15 @@ import { Button } from "components/ui/Button";
 import { Text } from "components/ui/Text";
 import { ComponentProps, FC } from "react";
 
-type Props = ComponentProps<"ul">;
+type Props = ComponentProps<"ul"> & {
+  onContactClick?: () => void;
+};
 
-export const ActionButtons: FC<Props> = ({ className, ...props }) => {
+export const ActionButtons: FC<Props> = ({
+  className,
+  onContactClick,
+  ...props
+}) => {
   const classes = clsx(className, styles.buttons);
   return (
     <ul className={classes} {...props}>
@@ -16,7 +22,7 @@ export const ActionButtons: FC<Props> = ({ className, ...props }) => {
         </Button>
       </li>
       <li>
-        <Button>
+        <Button onClick={onContactClick}>
           <Text as={"span"}>Contact me</Text>
         </Button>
       </li>
