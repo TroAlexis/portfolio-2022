@@ -6,7 +6,7 @@
   @include mixins.flex-column;
 
   flex: 1;
-  padding-top: calc(var(--header-height, variables.$header-height) * 100);
+  padding-top: functions.to-rem(variables.$header-height);
 }
 
 .footer {

@@ -27,12 +27,14 @@ $background-svg: '<svg viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/
 }
 
 .hero {
-  height: calc(var(--hero-height, 1vh) * 100);
+  --hero-height: calc(100vh - #{functions.to-rem(variables.$header-height)});
+
+  height: var(--hero-height);
   min-height: functions.to-rem(650px);
 
   @include mixins.media-max("lg") {
     height: auto;
-    min-height: calc((var(--hero-height, 1vh) * 100));
+    min-height: var(--hero-height);
     padding-top: functions.to-rem(variables.$spacing-3xl * 2);
   }
 
@@ -43,7 +45,9 @@ $background-svg: '<svg viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/
 
 .section {
   padding-top: calc(
-    var(--header-height, variables.$header-height) * 100 + #{variables.$spacing-step}
+    #{functions.to-rem(variables.$header-height)} + #{functions.to-rem(
+        variables.$spacing-step
+      )}
   );
 
   & + & {
