@@ -1,10 +1,10 @@
 import clsx from "clsx";
 import styles from "components/skills/SkillDescription/index.module.scss";
 import { Text } from "components/ui/Text";
-import React, { ComponentProps, FC } from "react";
+import React, { ComponentProps, FC, ReactNode } from "react";
 
 interface Props extends ComponentProps<"ul"> {
-  description: string[];
+  description: ReactNode[];
 }
 
 export const SkillDescription: FC<Props> = ({
@@ -15,8 +15,8 @@ export const SkillDescription: FC<Props> = ({
   const classes = clsx(className, styles.list);
   return (
     <ul className={classes} {...props}>
-      {description.map((paragraph) => (
-        <li key={paragraph} className={styles.item}>
+      {description.map((paragraph, index) => (
+        <li key={index} className={styles.item}>
           <Text as={"span"}>{paragraph};</Text>
         </li>
       ))}

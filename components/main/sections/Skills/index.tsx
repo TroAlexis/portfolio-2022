@@ -28,6 +28,7 @@ export const SkillsSection: FC<Props> = (props) => {
         />
         {description && (
           <SkillDescription
+            key={skill}
             description={description}
             className={styles.description}
           />

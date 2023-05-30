@@ -28,7 +28,9 @@ export const SkillCardList: FC<Props> = ({
             type={"button"}
             onActive={onItemActive}
             active={activeSkill === key}
-            {...skill}
+            label={skill.label}
+            icon={skill.icon}
+            style={skill.style}
             className={styles.card}
           />
         </li>

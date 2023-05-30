@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
-type Trigger = "focus";
+type Trigger = "focus" | "hover";
 type EventEntry = [string, string];
 
 export interface UseHoverOptions<T extends Element> {
@@ -13,12 +13,17 @@ const focusEvents: EventEntry = ["focusin", "focusout"];
 const hoverEvents: EventEntry = ["mouseover", "mouseout"];
 
 const getEventsArray = (triggers?: Trigger[]) => {
-  const events: EventEntry[] = [hoverEvents];
+  const events: EventEntry[] = [];
 
-  const hasFocus = triggers?.includes("focus");
-  if (hasFocus) {
-    events.push(focusEvents);
-  }
+  const addEventsIfPresent = (entry: EventEntry, event: Trigger) => {
+    const hasFocus = triggers?.includes(event);
+    if (hasFocus) {
+      events.push(entry);
+    }
+  };
+
+  addEventsIfPresent(focusEvents, "focus");
+  addEventsIfPresent(hoverEvents, "hover");
 
   return events;
 };
