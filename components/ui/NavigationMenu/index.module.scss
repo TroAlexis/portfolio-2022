@@ -1,4 +1,5 @@
 @use "styles/utils/colors";
+@use "styles/utils/variables";
 @use "sass:color";
 
 .wrapper {
@@ -34,5 +35,7 @@
 .container {
   display: flex;
   flex-direction: column;
-  padding-top: calc(var(--header-height, 0.8px) * 100 + 2rem);
+  padding-top: calc(
+    var(--header-height, variables.$header-height) * 100 + 2rem
+  );
 }

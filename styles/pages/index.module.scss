@@ -42,7 +42,9 @@ $background-svg: '<svg viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/
 }
 
 .section {
-  padding-top: calc(var(--header-height) * 100 + #{variables.$spacing-step});
+  padding-top: calc(
+    var(--header-height, variables.$header-height) * 100 + #{variables.$spacing-step}
+  );
 
   & + & {
     margin-top: functions.to-rem(variables.$spacing-lg * 3);
