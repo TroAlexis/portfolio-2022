@@ -16,7 +16,7 @@ export const ProjectsSection: FC<Props> = ({ className, ...props }) => {
     <MainSection
       section={section}
       className={classes}
-      heading={"Projects"}
+      heading={"Personal Projects"}
       {...props}
     >
       <ProjectList items={projects} />
