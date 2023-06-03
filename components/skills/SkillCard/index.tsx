@@ -7,7 +7,12 @@ import {
 import { SkillCardIcon } from "components/skills/SkillCard/Icon";
 import styles from "components/skills/SkillCard/index.module.scss";
 import { Text } from "components/ui/Text";
-import React, { ComponentPropsWithoutRef, FC, useMemo } from "react";
+import React, {
+  ComponentPropsWithoutRef,
+  FC,
+  useCallback,
+  useMemo,
+} from "react";
 
 import { visueltPro } from "@/config/next/fonts";
 import { PolymorphicComponentProps } from "@/types/types";
@@ -41,17 +46,19 @@ export const SkillCard = <T extends SkillCardTag = typeof DEFAULT_TAG>({
   });
   const Component = as || DEFAULT_TAG;
 
+  const handleActive = useCallback(() => onActive?.(id), [id, onActive]);
+
   const activeOptions: UseHoverOptions<HTMLButtonElement> = useMemo(
     () => ({
       triggers: ["focus"],
-      onEnter: () => onActive?.(id),
+      onEnter: handleActive,
     }),
-    [onActive, id]
+    [handleActive]
   );
   const [ref] = useActive<HTMLButtonElement>(activeOptions);
 
   return (
-    <Component className={classes} ref={ref} {...props}>
+    <Component className={classes} ref={ref} onClick={handleActive} {...props}>
       {icon && <SkillCardIcon icon={icon} className={styles.icon} />}
       <Text
         size={"xs"}
