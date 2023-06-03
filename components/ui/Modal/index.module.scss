@@ -13,6 +13,7 @@
   overflow: auto;
   background-color: colors.$bg-default;
   border-radius: variables.$border-radius;
+  outline: 0;
 
   @include mixins.media-max("md") {
     padding-right: functions.to-rem(variables.$spacing-sm);
