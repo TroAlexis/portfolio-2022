@@ -32,12 +32,20 @@ export enum Skills {
   NPM = "NPM",
 }
 
+function addAlpha(color: string, opacity: number) {
+  // coerce values so ti is between 0 and 1.
+  const _opacity = Math.round(Math.min(Math.max(opacity || 1, 0), 1) * 255);
+  return color + _opacity.toString(16).toUpperCase();
+}
+
 const createCSSProperties = (properties: Record<string, string>) =>
   properties as CSSProperties;
 
-const createStyle = (color: string) =>
+const createStyle = (color: string, gradient: string = color) =>
   createCSSProperties({
     "--icon-hover-color": color,
+    "--gradient-color": gradient,
+    "--shadow-color": addAlpha(gradient, 0.07),
   });
 
 type SkillProps = Pick<SkillCardProps<"button">, "icon" | "label" | "style"> & {
@@ -115,6 +123,7 @@ export const skillsMap: Partial<Record<Skills, SkillProps>> = {
     icon: IconWebpack,
     label: Skills.WEBPACK,
     style: createCSSProperties({
+      "--gradient-color": "#8ED6FB",
       "--icon-color": "#fafafa",
       "--icon-color-1": "#C4C4C4",
       "--icon-color-2": "#9a9a9a",
@@ -143,7 +152,7 @@ export const skillsMap: Partial<Record<Skills, SkillProps>> = {
   [Skills.NEXT]: {
     icon: IconBrandNextjs,
     label: Skills.NEXT,
-    style: createStyle("#101010"),
+    style: createStyle("#fff", "#007cf0"),
     description: [
       "Developing pet projects, using Next.js as out-of-the-box solution for SSG, routing, etc.",
       <>
@@ -186,7 +195,7 @@ export const skillsMap: Partial<Record<Skills, SkillProps>> = {
   [Skills.NUXT]: {
     icon: IconBrandNuxt,
     label: Skills.NUXT,
-    style: createStyle("rgb(0, 220, 130)"),
+    style: createStyle("#00dc82"),
     description: [
       "Developing an SSR application (familiar with the caveats and how to fight them)",
       'Implementing "feature slice design" for better maintainability and DX',
