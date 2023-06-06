@@ -1,20 +1,60 @@
 import ttgClubCover from "images/projects/ttg-club/ttg-club.jpg";
+import VictoriaGoal from "images/projects/victoria/victoria-1.png";
 
 import { ProjectSlug } from "@/constants/projects";
 import { Route } from "@/constants/routes";
-import { Project, ProjectCardInfo } from "@/types/project";
+import {
+  Project,
+  ProjectCardInfo,
+  ProjectParagraphDirection,
+} from "@/types/project";
 
 export const ttgClubProject: Project = {
   id: ProjectSlug.TTG_CLUB,
   title: "TTG Club",
   image: ttgClubCover,
-  stack: ["Nuxt.js", "Vue.js", "SCSS", "Webpack"],
+  stack: ["Vue 3", "Typescript", "SCSS", "Vite"],
   description: [
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque quam quas tempore unde veritatis! Consequatur culpa fuga inventore nesciunt omnis quia repellat soluta, tempore voluptas. Autem expedita iusto laborum officiis?",
+    "By a stroke of luck, I stumbled upon this amazing app that instantly grabbed my attention. Its contemporary and elegant design, combined with its extensive range of features, made it stand out from other platforms I had used for Dungeons & Dragons (D&D). Intrigued by its potential, I decided to connect with the talented team responsible for its development. To my delight, they were actively seeking frontend developers to help take the app to the next level. Following a series of meetings and successfully completing a test task, I was thrilled to be invited on board and contribute my skills to this awesome project.",
   ],
   links: [
-    { label: "read more", accent: true, href: "/" },
-    { label: "view code", href: "/" },
+    {
+      label: "view live",
+      accent: true,
+      href: "https://ttg.club/",
+      target: "_blank",
+    },
+    {
+      label: "view organisation",
+      href: "https://github.com/TTG-Club",
+    },
+  ],
+  paragraphs: [
+    {
+      image: VictoriaGoal,
+      description: [
+        "The app is specifically designed for passionate tabletop game enthusiasts, especially those who love playing games like Dungeons & Dragons (D&D). It caters to their unique needs and provides a wide range of features and tools that are specifically tailored to enhance their gaming experience. The app acts as a one-stop resource, serving as an extensive encyclopedia for the 5th edition of D&D. It's packed with a wealth of information and resources, allowing players to immerse themselves in the rich and intricate world of the Forgotten Realms. Alongside this, the app offers convenient tools such as a character characteristics calculator, a dice roller, and various generators for creating exciting elements like wild magic, random encounters, traders, and treasuries.",
+      ],
+      title: "Purpose & Goal",
+      direction: ProjectParagraphDirection.LTR,
+    },
+    {
+      image: VictoriaGoal,
+      description: [
+        "The team behind the app is made up of dedicated and enthusiastic Dungeons & Dragons players who contribute their time and expertise to its development, design, and content moderation. We understand that everyone has busy lives with numerous commitments and distractions, making it challenging to find ample time to work on the project. However, despite these obstacles, our passion for the game and our collective commitment to the project's success keeps us motivated. We are constantly striving to improve the app, enhance its features, and provide a valuable resource for the vibrant tabletop gaming community.",
+      ],
+      title: "The Challenge",
+      direction: ProjectParagraphDirection.RTL,
+    },
+    {
+      image: VictoriaGoal,
+      description: [
+        'Upon joining the team, I conducted a thorough scan of the project repository and identified certain inconsistencies in the structure. Recognizing the vast potential for future features, I proposed a restructuring of the project using the "feature slice design" architecture. This approach aimed to enhance scalability and improve the separation of concerns within the codebase. By implementing this new structure, we were able to streamline development processes, facilitate easier maintenance, and accommodate the seamless integration of new features. It was a valuable contribution to the project\'s long-term growth and adaptability.',
+        "To ensure optimal performance for the app, one of the initial features I focused on was implementing virtualized lists. Given the substantial amount of information to display, this was crucial to maintain smooth and efficient user experience. However, we faced the additional challenge of incorporating grouping and presenting the list in multiple columns. Overcoming this hurdle, I developed custom components for the grid and grouped lists, which can now be utilized throughout the entire app. It was a valuable learning experience, and I take pride in seeing these components utilized in various sections of the app, contributing to its overall functionality and usability.",
+      ],
+      title: "Problems & Solutions",
+      direction: ProjectParagraphDirection.VERTICAL,
+    },
   ],
 };
 

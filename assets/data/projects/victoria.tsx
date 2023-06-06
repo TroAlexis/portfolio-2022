@@ -20,7 +20,7 @@ export const victoriaProject: Project = {
   image: VictoriaCover,
   stack: ["Nuxt.js", "Pug", "SCSS", "Webpack"],
   description: [
-    "My first freelance opportunity where I handled everything from design to development. Although I primarily focus on development, I decided to challenge myself and take on the design part as well. It was a lot of work and required inspiration, but I'm proud of the final result.",
+    "My first freelance project, where I had the opportunity to oversee every aspect from design to development. While my main focus has always been on development, I decided to step out of my comfort zone and embrace the challenge of taking on the design responsibilities as well. It was an intensive journey that demanded a lot of effort and creativity, but I take immense pride in the final outcome I was able to achieve.",
   ],
   links: [
     {
@@ -34,7 +34,7 @@ export const victoriaProject: Project = {
     {
       image: VictoriaGoal,
       description: [
-        "I used to live in a small town by the sea, and one summer my friends visited me and stayed at a hotel with an extremely outdated website. Recognizing the opportunity, I reached out to the owner and offered my services as a developer. Fortunately, they responded positively, and I began working on the project. Starting with wireframes and incorporating feedback, I moved on to design and development.",
+        "During my time living in a small seaside town, I had the pleasure of hosting some friends for a summer getaway. To my surprise, the hotel they stayed at had an incredibly outdated website that desperately needed a revamp. Recognizing the potential for improvement, I took the initiative to contact the hotel owner and offer my services as a developer. Thankfully, they were receptive to my proposal, and I eagerly took on the project. Starting with wireframes, I meticulously refined the design based on feedback, before diving into the development phase. It was a rewarding experience to witness the transformation of the website from its initial state to a polished and modern online presence.",
       ],
       title: "Purpose & Goal",
       direction: ProjectParagraphDirection.LTR,
@@ -42,7 +42,7 @@ export const victoriaProject: Project = {
     {
       image: VictoriaDesign,
       description: [
-        "The design aspect was new and challenging for me, but also exciting. To create a visually appealing logo and landing page for the client's business, I collaborated with a logo designer and made necessary revisions until we achieved a great logo. Drawing inspiration from platforms like Dribbble and Behance, I spent weeks working on the design in Figma, going through several rounds of feedback and revisions to ensure the client's satisfaction. Once the design was finalized, I proceeded with development.",
+        "The design aspect was new and challenging for me, but also exciting. To create a visually appealing logo and landing page for the client's business, I collaborated with a logo designer and made necessary revisions until we achieved a great logo. Drawing inspiration from Dribbble and Behance, I spent weeks working on the design in Figma, going through several rounds of feedback and revisions to ensure the client's satisfaction. Once the design was finalized, I proceeded with development.",
       ],
       title: "Design Challenge",
       direction: ProjectParagraphDirection.RTL,
