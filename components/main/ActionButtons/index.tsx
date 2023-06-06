@@ -17,7 +17,13 @@ export const ActionButtons: FC<Props> = ({
   return (
     <ul className={classes} {...props}>
       <li>
-        <Button outline as={"a"} href={"/resume.pdf"} download>
+        <Button
+          className={styles.link}
+          outline
+          as={"a"}
+          href={"/resume.pdf"}
+          download
+        >
           <Text as={"span"}>Resume</Text>
         </Button>
       </li>

@@ -6,3 +6,7 @@
   gap: functions.to-rem(variables.$spacing-sm);
   align-items: center;
 }
+
+.link {
+  display: inline-flex;
+}
