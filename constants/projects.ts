@@ -1,4 +1,4 @@
 export enum ProjectSlug {
   VICTORIA = "victoria",
-  LIGVA = "ligva",
+  TTG_CLUB = "ttg-club",
 }

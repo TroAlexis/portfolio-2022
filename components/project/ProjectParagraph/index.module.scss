@@ -46,6 +46,10 @@ $image: i;
 
 .paragraph {
   line-height: 1.5;
+
+  & + & {
+    margin-top: functions.to-rem(variables.$spacing-md);
+  }
 }
 
 .imageWrapper {

@@ -29,12 +29,7 @@ export const ProjectHead: FC<Props> = ({ project, className, ...props }) => {
       {image && <Image src={image} alt={title} className={styles.image} />}
 
       {description.map((paragraph, index) => (
-        <Text
-          as={"p"}
-          key={paragraph + index}
-          size={"sm"}
-          className={styles.description}
-        >
+        <Text as={"p"} key={index} size={"sm"} className={styles.description}>
           {paragraph}
         </Text>
       ))}

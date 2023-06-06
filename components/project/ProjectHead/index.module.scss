@@ -30,6 +30,7 @@
   width: 90%;
   max-width: functions.to-rem(800px);
   height: auto;
+  margin-bottom: functions.to-rem(variables.$spacing-2xl);
   border-radius: 8px;
   box-shadow: variables.$shadow-image;
 }
