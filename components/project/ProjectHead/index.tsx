@@ -27,7 +27,14 @@ export const ProjectHead: FC<Props> = ({ project, className, ...props }) => {
       </Heading>
 
       {image && (
-        <Image src={image} alt={title} priority className={styles.image} />
+        <Image
+          src={image}
+          alt={title}
+          width={800}
+          height={500}
+          priority
+          className={styles.image}
+        />
       )}
 
       {description.map((paragraph, index) => (

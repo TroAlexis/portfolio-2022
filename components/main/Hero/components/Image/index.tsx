@@ -14,8 +14,9 @@ export const HeroImage: FC<Props> = ({ className, ...props }) => {
         <Image
           className={styles.image}
           src={PersonalPhoto}
-          alt={"Photo of me looking into brighter future"}
-          width={450}
+          alt={"Alexey Troshin"}
+          width={540}
+          height={360}
           priority
         />
       </div>
