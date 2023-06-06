@@ -31,7 +31,9 @@
 }
 
 .item {
+  display: flex;
   flex: 0 1 calc(50% - #{functions.to-rem(variables.$spacing-2xl) / 2});
+  flex-direction: column;
 
   @include mixins.media-max("md") {
     flex-basis: 65vw;
@@ -43,4 +45,8 @@
     flex-basis: 80vw;
     flex-shrink: 0;
   }
+}
+
+.card {
+  flex: 1;
 }

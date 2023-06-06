@@ -15,7 +15,7 @@ export const ProjectList: FC<Props> = ({ className, items, ...props }) => {
     <ul className={classes} {...props}>
       {items.map((item) => (
         <li key={item.name} className={styles.item}>
-          <ProjectCard {...item} />
+          <ProjectCard className={styles.card} {...item} />
         </li>
       ))}
     </ul>

@@ -20,9 +20,10 @@
 }
 
 .description {
+  margin-bottom: functions.to-rem(variables.$spacing-md);
   line-height: 1.5;
 }
 
 .links {
-  margin-top: functions.to-rem(variables.$spacing-md);
+  margin-top: auto;
 }
