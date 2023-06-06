@@ -28,8 +28,8 @@ export const ProjectParagraph: FC<Props> = ({
         {title}
       </Heading>
       <div className={styles.description}>
-        {description.map((paragraph) => (
-          <Text as={"p"} className={styles.paragraph} key={paragraph}>
+        {description.map((paragraph, index) => (
+          <Text as={"p"} className={styles.paragraph} key={index}>
             {paragraph}
           </Text>
         ))}

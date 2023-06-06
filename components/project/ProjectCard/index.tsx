@@ -26,7 +26,14 @@ export const ProjectCard: FC<Props> = ({
 
   return (
     <article className={classes} {...props}>
-      <Image src={cover} alt={name} className={styles.image} />
+      <Image
+        src={cover}
+        loading={"lazy"}
+        width={540}
+        height={360}
+        alt={name}
+        className={styles.image}
+      />
       <Heading as={"h3"} preset={"h3"} className={styles.heading}>
         {name}
       </Heading>
