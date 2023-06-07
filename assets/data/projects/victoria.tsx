@@ -107,7 +107,7 @@ export const victoriaCard: ProjectCardInfo = {
   name: "V-Victoria",
   cover: VictoriaCover,
   description:
-    "A hotel website for a local business, built from the ground up leveraging power of Nuxt.js, SCSS, and Pug. The fully responsive design ensures a seamless experience across all devices, while advanced optimization techniques guarantee fast loading times. This project provided valuable experience in collaborating with clients and transforming their vision into reality. This project allowed me to gain even more valuable experience in frontend development, user experience design, and project management, while successfully bringing the client's vision to life.",
+    "A hotel website for a local business, built from the ground up leveraging power of Nuxt.js, SCSS, and Pug. The fully responsive design ensures a seamless experience across all devices, while advanced optimization techniques guarantee fast loading times. This project allowed me to gain even more valuable experience in frontend development, user experience design, and project management, while successfully bringing the client's vision to life.",
   links: [
     {
       label: "read more",
