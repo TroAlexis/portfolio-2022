@@ -3,7 +3,7 @@
 
 .paragraph {
   & + & {
-    margin-top: functions.to-rem(variables.$spacing-xl);
+    margin-top: functions.to-rem(variables.$spacing-sm);
   }
 
   line-height: 1.5;

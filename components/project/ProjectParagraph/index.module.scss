@@ -44,14 +44,6 @@ $image: i;
   grid-area: $description;
 }
 
-.paragraph {
-  line-height: 1.5;
-
-  & + & {
-    margin-top: functions.to-rem(variables.$spacing-md);
-  }
-}
-
 .imageWrapper {
   display: flex;
   grid-area: $image;

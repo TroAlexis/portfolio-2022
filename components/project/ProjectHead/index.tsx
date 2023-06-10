@@ -3,7 +3,7 @@ import { ProjectHeadStack } from "components/project/ProjectHead/components/Stac
 import { ProjectLinkSet } from "components/project/ProjectLinkSet";
 import { Container } from "components/ui/Container";
 import { Heading } from "components/ui/Heading";
-import { Text } from "components/ui/Text";
+import { Paragraphs } from "components/ui/Paragraphs";
 import Image from "next-image-export-optimizer";
 import React, { ComponentProps, FC } from "react";
 
@@ -29,7 +29,7 @@ export const ProjectHead: FC<Props> = ({ project, className, ...props }) => {
       {image && (
         <Image
           src={image}
-          alt={title}
+          alt={"Project screenshot in a mockup on gradient background"}
           width={800}
           height={500}
           priority
@@ -37,11 +37,7 @@ export const ProjectHead: FC<Props> = ({ project, className, ...props }) => {
         />
       )}
 
-      {description.map((paragraph, index) => (
-        <Text as={"p"} key={index} size={"sm"} className={styles.description}>
-          {paragraph}
-        </Text>
-      ))}
+      <Paragraphs items={description} />
 
       <ProjectHeadStack project={project} className={styles.stack} />
 

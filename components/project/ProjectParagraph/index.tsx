@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { Heading } from "components/ui/Heading";
-import { Text } from "components/ui/Text";
+import { Paragraphs } from "components/ui/Paragraphs";
 import Image from "next-image-export-optimizer";
 import React, { ComponentProps, FC } from "react";
 
@@ -28,11 +28,7 @@ export const ProjectParagraph: FC<Props> = ({
         {title}
       </Heading>
       <div className={styles.description}>
-        {description.map((paragraph, index) => (
-          <Text as={"p"} className={styles.paragraph} key={index}>
-            {paragraph}
-          </Text>
-        ))}
+        <Paragraphs items={description} />
       </div>
       <div className={styles.imageWrapper}>
         <Image src={image} alt={title} className={styles.image} />

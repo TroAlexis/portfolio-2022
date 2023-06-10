@@ -35,14 +35,6 @@
   box-shadow: variables.$shadow-image;
 }
 
-.description {
-  line-height: 1.5;
-
-  & + & {
-    margin-top: functions.to-rem(variables.$spacing-sm);
-  }
-}
-
 .stack {
   margin-top: functions.to-rem(variables.$spacing-lg);
   margin-bottom: functions.to-rem(variables.$spacing-lg);

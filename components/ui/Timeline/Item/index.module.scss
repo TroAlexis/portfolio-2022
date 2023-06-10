@@ -70,7 +70,7 @@ $circle-size-with-spacing-sm: $circle-size + $spacing-sm;
   align-items: center;
   align-self: flex-start;
   order: 1;
-  max-width: functions.to-rem(80px);
+  max-width: functions.to-rem(68px);
   padding-right: functions.to-rem(variables.$spacing-md);
   padding-left: functions.to-rem(variables.$spacing-md);
   line-height: 1.5;
@@ -114,10 +114,13 @@ $circle-size-with-spacing-sm: $circle-size + $spacing-sm;
 }
 
 .period {
+  display: inline-block;
   margin-bottom: functions.to-rem(variables.$spacing-sm);
   text-transform: uppercase;
 }
 
 .description {
+  display: flex;
+  flex-direction: column;
   line-height: 1.5;
 }

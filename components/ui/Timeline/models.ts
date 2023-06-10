@@ -1,6 +1,8 @@
+import { ReactNode } from "react";
+
 export interface TimelinePoint {
   title: string;
   period: [string, string];
-  description: string;
+  description: ReactNode[];
   label: string;
 }

@@ -13,8 +13,8 @@ export const ProjectList: FC<Props> = ({ className, items, ...props }) => {
   const classes = clsx(className, styles.list);
   return (
     <ul className={classes} {...props}>
-      {items.map((item) => (
-        <li key={item.name} className={styles.item}>
+      {items.map((item, index) => (
+        <li key={index} className={styles.item}>
           <ProjectCard className={styles.card} {...item} />
         </li>
       ))}

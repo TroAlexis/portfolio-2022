@@ -76,7 +76,7 @@ export const skillsMap: Partial<Record<Skills, SkillProps>> = {
       "Optimising performance of heavy operations utilising hash maps, memoization, etc.",
       "Utilising modern APIs, operators and following best practices",
       "ES6+",
-      "WebSockets, REST API",
+      "WebSockets, REST API, GraphQL",
       'Sticking to "SOLID", "DRY", "KISS", "YAGNI" principles',
     ],
   },

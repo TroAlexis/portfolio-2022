@@ -1,6 +1,5 @@
 import { MainSection } from "components/main/MainSection";
-import styles from "components/main/sections/About/index.module.scss";
-import { Text } from "components/ui/Text";
+import { Paragraphs } from "components/ui/Paragraphs";
 import React, { ComponentProps, FC } from "react";
 
 import { APP_SECTIONS } from "@/config/app/sections";
@@ -19,11 +18,7 @@ const section = APP_SECTIONS.about;
 export const AboutSection: FC<Props> = (props) => {
   return (
     <MainSection section={section} heading={"About me"} {...props}>
-      {paragraphs.map((paragraph, index) => (
-        <Text as={"p"} key={index} className={styles.paragraph}>
-          {paragraph}
-        </Text>
-      ))}
+      <Paragraphs items={paragraphs} />
     </MainSection>
   );
 };

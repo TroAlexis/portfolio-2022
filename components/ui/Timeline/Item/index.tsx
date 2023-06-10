@@ -1,6 +1,7 @@
 import LabelArrow from "assets/svg/timeline-label.svg";
 import clsx from "clsx";
 import { Heading } from "components/ui/Heading";
+import { Paragraphs } from "components/ui/Paragraphs";
 import { Text } from "components/ui/Text";
 import { TimelinePoint } from "components/ui/Timeline/models";
 import React, { ComponentProps, ElementType } from "react";
@@ -35,11 +36,11 @@ export const TimelineItem = <T extends ElementType>({
         <Heading preset={"h4"} as={"h4"} className={styles.title}>
           {title}
         </Heading>
-        <Text size={"xs"} as={"p"} weight={500} className={styles.period}>
+        <Text size={"xs"} as={"span"} weight={500} className={styles.period}>
           {from} - {to}
         </Text>
-        <Text size={"sm"} as={"p"} className={styles.description}>
-          {description}
+        <Text size={"sm"} as={"div"} className={styles.description}>
+          <Paragraphs items={description} />
         </Text>
       </div>
     </Component>

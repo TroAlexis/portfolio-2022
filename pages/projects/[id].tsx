@@ -9,15 +9,12 @@ import Head from "next/head";
 import styles from "styles/pages/project.module.scss";
 
 import { ProjectSlug } from "@/constants/projects";
+import { Project } from "@/types/project";
 
 export default function ProjectPage({
   projectId,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const project = projectsMap[projectId as ProjectSlug];
-
-  if (!project) {
-    return null;
-  }
+  const project = projectsMap[projectId as ProjectSlug] as Project;
 
   const otherProjects = allProjects.filter(
     (project) => project.id !== projectId
