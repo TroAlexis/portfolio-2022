@@ -31,7 +31,7 @@ export const ProjectCard: FC<Props> = ({
         loading={"lazy"}
         width={540}
         height={360}
-        alt={name}
+        alt={description}
         className={styles.image}
       />
       <Heading as={"h3"} preset={"h3"} className={styles.heading}>

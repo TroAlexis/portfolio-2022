@@ -5,7 +5,7 @@ import { ProjectSlug } from "@/constants/projects";
 
 export type Project = {
   id: string;
-  title: string;
+  title: ReactNode;
   image?: string | StaticImageData;
   description: ReactNode[];
   stack: string[];
@@ -35,7 +35,7 @@ export type ProjectParagraph = {
 
 export interface ProjectCardInfo {
   id?: ProjectSlug;
-  name: string;
+  name: ReactNode;
   description: string;
   cover: string | StaticImageData;
   links?: ProjectLink[];

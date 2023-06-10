@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import styles from "components/main/Footer/components/Link/index.module.scss";
+import { Icon } from "components/ui/Icon";
 import { Link } from "components/ui/Link";
 import { Text } from "components/ui/Text";
 import React, { ComponentProps, FC } from "react";
@@ -12,7 +13,7 @@ export interface FooterLinkProps
     Social {}
 
 export const FooterLink: FC<FooterLinkProps> = ({
-  icon: Icon,
+  icon: SvgIcon,
   label,
   className,
   ...props
@@ -20,8 +21,10 @@ export const FooterLink: FC<FooterLinkProps> = ({
   const classes = clsx(className, styles.wrapper);
   return (
     <Link plain className={classes} {...props}>
-      <Link<"span"> is={"span"} plain icon>
-        <Icon className={styles.icon} />
+      <Link<"span"> is={"span"} className={styles.iconWrapper} plain icon>
+        <Icon className={styles.icon}>
+          <SvgIcon />
+        </Icon>
       </Link>
       <Link<"span"> is={"span"}>
         <Text

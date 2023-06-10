@@ -1,6 +1,7 @@
 import { socials } from "assets/data/socials";
 import clsx from "clsx";
 import styles from "components/main/Hero/components/Socials/index.module.scss";
+import { Icon } from "components/ui/Icon";
 import { Link } from "components/ui/Link";
 import React, { ComponentProps, FC } from "react";
 
@@ -10,11 +11,13 @@ export const HeroSocials: FC<Props> = ({ className, ...props }) => {
   const classes = clsx(className, styles.socials);
   return (
     <ul className={classes} {...props}>
-      {socials.map(([key, { icon: Icon, link }], index) => {
+      {socials.map(([key, { icon: SvgIcon, link }], index) => {
         return (
-          <li className={styles.icon} key={index}>
+          <li key={index}>
             <Link href={link} icon>
-              <Icon />
+              <Icon>
+                <SvgIcon />
+              </Icon>
             </Link>
           </li>
         );

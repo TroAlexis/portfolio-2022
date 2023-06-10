@@ -14,6 +14,11 @@
   box-shadow: variables.$shadow-image;
 }
 
+.heading {
+  display: flex;
+  gap: functions.to-rem(variables.$spacing-lg);
+}
+
 .heading,
 .image {
   margin-bottom: functions.to-rem(variables.$spacing-md);
