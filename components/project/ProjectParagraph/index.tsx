@@ -31,7 +31,13 @@ export const ProjectParagraph: FC<Props> = ({
         <Paragraphs items={description} />
       </div>
       <div className={styles.imageWrapper}>
-        <Image src={image} alt={title} className={styles.image} />
+        <Image
+          src={image}
+          alt={title}
+          width={540}
+          height={370}
+          className={styles.image}
+        />
       </div>
     </article>
   );

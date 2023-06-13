@@ -119,6 +119,11 @@ $circle-size-with-spacing-sm: $circle-size + $spacing-sm;
   text-transform: uppercase;
 }
 
+.delta {
+  font-style: italic;
+  text-transform: lowercase;
+}
+
 .description {
   display: flex;
   flex-direction: column;

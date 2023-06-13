@@ -1,8 +1,8 @@
 import { Link } from "components/ui/Link";
 import { Text } from "components/ui/Text";
-import VictoriaGoal from "images/projects/victoria/victoria-1.png";
-import VictoriaDesign from "images/projects/victoria/victoria-2.png";
-import VictoriaProblem from "images/projects/victoria/victoria-3.png";
+import VictoriaGoal from "images/projects/victoria/victoria-1.jpg";
+import VictoriaDesign from "images/projects/victoria/victoria-2.jpg";
+import VictoriaProblem from "images/projects/victoria/victoria-3.jpg";
 import VictoriaCover from "images/projects/victoria/victoria-cover.jpg";
 import React from "react";
 
@@ -50,7 +50,7 @@ export const victoriaProject: Project = {
     {
       image: VictoriaProblem,
       description: [
-        'To deliver an exceptional user experience, I chose Nuxt.js as my framework of choice. It provided an "out-of-the-box" solution with excellent documentation and features. Considering the client\'s request for extensive visual content, I implemented smart strategies. This involved applying lazy-loading techniques for images and lazily loading/initializing the maps module using Intersection Observer.',
+        'Nuxt.js was my framework of choice as it provided an "out-of-the-box" solution with excellent documentation and features. Considering the client\'s request for extensive visual content, I implemented smart strategies. This involved applying lazy-loading techniques for images and lazily loading/initializing the maps module using Intersection Observer.',
         "Image optimization played a crucial role in achieving optimal website performance. I utilized various loaders for image transformations, converting to the WebP format, and employed the picture tag to deliver the best possible image based on the user's viewport. Additionally, I combined SVG logos into an SVG sprite and injected them into the DOM. To further optimize the website, I utilized techniques like code-splitting, preloading, and prefetching.",
         <>
           Achieving great performance required extensive Webpack configuration

@@ -21,8 +21,8 @@ export const LetsTalkSection: FC<Props> = ({ className, ...props }) => {
       {...props}
     >
       <Text>
-        I am always open to exciting offers! So feel free to reach out on social
-        media or leave a message here via the contact form.
+        I am always open to exciting opportunities! So feel free to reach out on
+        social media or leave a message here via the contact form.
       </Text>
     </MainSection>
   );

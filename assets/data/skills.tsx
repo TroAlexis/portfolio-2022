@@ -59,20 +59,6 @@ export const skillsMap: Partial<Record<Skills, SkillProps>> = {
     style: createStyle("#EBD94D"),
     description: [
       "Making vanilla Javascript plugins (dropdowns, a datepicker, custom form elements)",
-      <>
-        Creating a{" "}
-        {
-          <Link href={"https://www.npmjs.com/package/naviscroll"}>
-            {" "}
-            <Text as={"span"} accent>
-              {" "}
-              mini-library{" "}
-            </Text>{" "}
-          </Link>
-        }{" "}
-        based on Intersection Observer API for generating navigation menu and
-        scroll tracking for simple js websites
-      </>,
       "Optimising performance of heavy operations utilising hash maps, memoization, etc.",
       "Utilising modern APIs, operators and following best practices",
       "ES6+",
@@ -142,8 +128,28 @@ export const skillsMap: Partial<Record<Skills, SkillProps>> = {
     description: [
       'Applying design patterns like "factory", "render props", "compound components", "higher-order components (HOC)", "observer"',
       "Writing reusable and maintainable components with hooks",
-      'Using DHTMLX Gantt Chart library and custom "renderless" components to provide great user experience for a "project management" app',
-      "Creating complex canvas interactions with React-Flow and WebSockets",
+      <>
+        Using{" "}
+        <Link
+          target={"_blank"}
+          href={"https://dhtmlx.com/docs/products/dhtmlxGantt/"}
+        >
+          <Text accent as={"span"}>
+            DHTMLX Gantt library
+          </Text>
+        </Link>{" "}
+        and custom &quot;renderless&quot; components to provide great user
+        experience for a &quot;project management&quot; app
+      </>,
+      <>
+        Creating complex canvas interactions with{" "}
+        <Link target={"_blank"} href={"https://reactflow.dev/"}>
+          <Text accent as={"span"}>
+            React Flow
+          </Text>
+        </Link>{" "}
+        and WebSockets,
+      </>,
       "GraphQL integration with Apollo Client",
       'Using "virtual lists" to optimise rendering of multiple components',
       'Maintaining a UI-library with "Storybook"',
