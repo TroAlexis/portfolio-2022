@@ -31,6 +31,19 @@ export const formulaProject: Project = {
   title: "Formulae",
   image: formulaeCover,
   stack: ["Next.js", "Mantine", "Zustand"],
+  links: [
+    {
+      label: "view live",
+      accent: true,
+      href: "https://troalexis.github.io/formulae/",
+      target: "_blank",
+    },
+    {
+      label: "view code",
+      href: "https://github.com/TroAlexis/formulae",
+      target: "_blank",
+    },
+  ],
   description: [
     <>
       I embarked on an exciting journey with a solo project that was probably
