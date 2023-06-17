@@ -27,10 +27,7 @@ export const TimelineItem = <T extends ElementType>({
   const Component = as || "div";
   const classes = clsx(className, styles.item);
   const [from, to] = period;
-  const delta = getDatesDeltaInYearsAndMonths(
-    to === "present" ? new Date() : new Date(to),
-    new Date(from)
-  );
+  const delta = getDatesDeltaInYearsAndMonths(to.date, from.date);
   return (
     <Component className={classes} {...props}>
       <Heading as={"span"} size={"sm"} className={styles.label}>
@@ -42,7 +39,7 @@ export const TimelineItem = <T extends ElementType>({
           {title}
         </Heading>
         <Text size={"xs"} as={"span"} weight={500} className={styles.period}>
-          {from} - {to}{" "}
+          {from.text} - {to.text}{" "}
           <Text size={"xs"} as={"span"} weight={400} className={styles.delta}>
             ({delta})
           </Text>

@@ -63,10 +63,13 @@ export const timeline: TimelinePoint[] = [
       </>,
       "One of my significant contributions involved enhancing TypeScript typing throughout different sections of the project, maintaining a UI library and extracting shared modules that were utilized across the project to keep everything DRY and improve maintainability. Moreover, I conducted thorough refactorings and performed code reviews to ensure code quality and maintainability.",
     ],
-    period: ["may 2022", "present"],
+    period: [
+      { date: new Date("2022-05-01"), text: "may 2022" },
+      { date: new Date(), text: "present" },
+    ],
   },
   {
-    label: "2021",
+    label: "2020",
     title: "Idaproject, Software engineer",
     description: [
       "Idaproject is a digital agency that specializes in the creation and maintenance of real estate websites. They have established partnerships with some of the largest developer firms in the industry.",
@@ -76,10 +79,19 @@ export const timeline: TimelinePoint[] = [
       "In addition, I had the privilege of working on a project that involved developing a simple Learning Management System (LMS). This experience provided me with valuable insights into working with iframes and understanding how to effectively communicate with them and inject custom styles.",
       "One particularly rewarding experience was becoming part of the company's charity initiative to develop a new website for a social hotel catering to children with cancer. I played a crucial role in laying the foundation for the project and made significant contributions throughout its development. It was a fulfilling opportunity to contribute to a meaningful cause and utilize my skills for the benefit of others.",
     ],
-    period: ["june 2020", "may 2022"],
+    period: [
+      {
+        date: new Date("2020-06-01"),
+        text: "june 2020",
+      },
+      {
+        date: new Date("2022-05-01"),
+        text: "may 2022",
+      },
+    ],
   },
   {
-    label: "2020",
+    label: "2019",
     title: "LuckyAds, Frontend engineer",
     description: [
       "LuckyAds is a native advertising platform that offers a comprehensive range of technical capabilities for Advertisers and Advertising Agencies to effectively place their advertisements.",
@@ -108,16 +120,34 @@ export const timeline: TimelinePoint[] = [
         handbook seamless and intuitive.
       </>,
     ],
-    period: ["september 2019", "june 2020"],
+    period: [
+      {
+        date: new Date("2019-09-01"),
+        text: "september 2019",
+      },
+      {
+        date: new Date("2020-06-01"),
+        text: "june 2020",
+      },
+    ],
   },
   {
-    label: "2019",
+    label: "2018",
     title: "Ligva, Frontend engineer",
     description: [
       "I was thrilled to receive a recommendation for a frontend position at Ligva, an exciting startup that focused on creating a platform for affordable, speedy, and secure text translations.",
       "When I became part of the team, the project was already in progress, the frontend was being built with Nuxt.js, the backend leveraged Laravel and Node.js. My role involved a wide range of responsibilities which included developing a chat module with WebSockets to facilitate seamless communication with clients, transitioning the app to TailwindCSS for improved styling consistency, ensuring that the app was fully responsive and accessible on various devices, and creating visually appealing landing pages and emails. Despite our team's combined efforts and the app's promising prospects, unfortunate obstacles such as funding limitations and fierce competition ultimately resulted in the project being discontinued soon after its launch.",
     ],
-    period: ["october 2018", "august 2019"],
+    period: [
+      {
+        date: new Date("2018-10-01"),
+        text: "october 2018",
+      },
+      {
+        date: new Date("2019-08-01"),
+        text: "august 2019",
+      },
+    ],
   },
   {
     label: "2018",
@@ -148,6 +178,15 @@ export const timeline: TimelinePoint[] = [
         .{" "}
       </>,
     ],
-    period: ["february 2018", "september 2018"],
+    period: [
+      {
+        text: "february 2018",
+        date: new Date("2018-02-01"),
+      },
+      {
+        text: "september 2018",
+        date: new Date("2018-09-01"),
+      },
+    ],
   },
 ];
