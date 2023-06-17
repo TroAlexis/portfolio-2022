@@ -19,8 +19,8 @@
   gap: functions.to-rem(variables.$spacing-lg);
 }
 
-.heading,
-.image {
+.headingWrapper,
+.imageWrapper {
   margin-bottom: functions.to-rem(variables.$spacing-md);
 }
 
