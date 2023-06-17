@@ -14,17 +14,6 @@ import {
   ProjectParagraphDirection,
 } from "@/types/project";
 
-const projectTitle = (
-  <>
-    TTG Club{" "}
-    <Link href={"https://github.com/TTG-Club/ttg-club-frontend"} icon>
-      <Icon>
-        <GithubIcon />
-      </Icon>
-    </Link>
-  </>
-);
-
 export const ttgClubProject: Project = {
   id: ProjectSlug.TTG_CLUB,
   title: "TTG Club",
@@ -77,7 +66,16 @@ export const ttgClubProject: Project = {
 
 export const ttgClubCard: ProjectCardInfo = {
   id: ProjectSlug.TTG_CLUB,
-  name: projectTitle,
+  name: {
+    label: "TTG Club",
+    links: (
+      <Link href={"https://github.com/TTG-Club/ttg-club-frontend"} icon>
+        <Icon>
+          <GithubIcon />
+        </Icon>
+      </Link>
+    ),
+  },
   cover: ttgClubCover,
   description:
     "A tabletop games companion app. As an avid player of Dungeons & Dragons, I joined the development of this project in my spare time. What once began as one person's endeavor has now grown into a collaborative effort with a team of passionate enthusiasts. Together, we are building a comprehensive companion for tabletop games, catering to a thriving community of players and visitors. It's a labor of love that combines my passion for D&D with my frontend expertise, and I'm excited to contribute to the growth and success of this project.",

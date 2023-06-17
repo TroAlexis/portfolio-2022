@@ -15,17 +15,6 @@ import {
   ProjectParagraphDirection,
 } from "@/types/project";
 
-const projectTitle = (
-  <>
-    Formulae{" "}
-    <Link href={"https://github.com/TroAlexis/formulae"} icon>
-      <Icon>
-        <GithubIcon />
-      </Icon>
-    </Link>
-  </>
-);
-
 export const formulaProject: Project = {
   id: ProjectSlug.FORMULAE,
   title: "Formulae",
@@ -98,7 +87,16 @@ export const formulaProject: Project = {
 
 export const formulaeCard: ProjectCardInfo = {
   id: ProjectSlug.FORMULAE,
-  name: projectTitle,
+  name: {
+    label: "Formulae",
+    links: (
+      <Link href={"https://github.com/TroAlexis/formulae"} icon>
+        <Icon>
+          <GithubIcon />
+        </Icon>
+      </Link>
+    ),
+  },
   cover: formulaeCover,
   description:
     "Formulas creator app. During my trip around Southeast Asia, I encountered the recurring challenge determining the most favorable money exchange options — whether it was cash, card, or cryptocurrency. Inspired by this need, I developed this app as a solution. It allows you to create and save personalized formulas, name variables and expressions, and conveniently reuse them whenever required. Moreover, you can easily share your formulas with others who might find them helpful. To enhance usability, I implemented PWA support, ensuring that you can access the app even offline.",

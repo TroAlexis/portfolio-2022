@@ -42,7 +42,7 @@ export const victoriaProject: Project = {
     {
       image: VictoriaDesign,
       description: [
-        "The design aspect was new and challenging for me, but also exciting. To create a visually appealing logo and landing page for the client's business, I collaborated with a logo designer and made necessary revisions until we achieved a great logo. Drawing inspiration from Dribbble and Behance, I spent weeks working on the design in Figma, going through several rounds of feedback and revisions to ensure the client's satisfaction. Once the design was finalized, I proceeded with development.",
+        "The design aspect was new and challenging for me, but also exciting. To create a visually appealing logo for the client's business, I collaborated with a logo designer and made necessary revisions until we achieved a great logo. Drawing inspiration from Dribbble and Behance, I spent weeks working on the design in Figma, going through several rounds of feedback and revisions to ensure the client's satisfaction. Once the design was finalized, I proceeded with development.",
       ],
       title: "Design Challenge",
       direction: ProjectParagraphDirection.RTL,

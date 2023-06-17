@@ -35,7 +35,7 @@ export type ProjectParagraph = {
 
 export interface ProjectCardInfo {
   id?: ProjectSlug;
-  name: ReactNode;
+  name: string | { label: ReactNode; links: ReactNode };
   description: string;
   cover: string | StaticImageData;
   links?: ProjectLink[];

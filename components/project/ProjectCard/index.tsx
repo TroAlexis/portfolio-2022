@@ -26,6 +26,10 @@ export const ProjectCard: FC<Props> = ({
   const hasLink = !!links;
   const [firstLink] = links || [];
 
+  const isExtendedHeading = typeof name !== "string";
+  const heading = isExtendedHeading ? name.label : name;
+  const headingLinks = isExtendedHeading ? name.links : null;
+
   return (
     <article className={classes} {...props}>
       <Link href={firstLink.href} plain className={styles.imageWrapper}>
@@ -38,11 +42,15 @@ export const ProjectCard: FC<Props> = ({
           className={styles.image}
         />
       </Link>
-      <Link href={firstLink.href} plain className={styles.headingWrapper}>
-        <Heading as={"h3"} preset={"h3"} className={styles.heading}>
-          {name}
-        </Heading>
-      </Link>
+      <div className={styles.header}>
+        <Link href={firstLink.href} plain>
+          <Heading as={"h3"} preset={"h3"} className={styles.heading}>
+            {heading}
+          </Heading>
+        </Link>
+
+        {headingLinks}
+      </div>
       <Text size={"sm"} as={"p"} className={styles.description}>
         {description}
       </Text>

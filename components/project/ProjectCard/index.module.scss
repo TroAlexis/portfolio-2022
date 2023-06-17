@@ -14,12 +14,13 @@
   box-shadow: variables.$shadow-image;
 }
 
-.heading {
+.header {
   display: flex;
   gap: functions.to-rem(variables.$spacing-lg);
+  align-items: center;
 }
 
-.headingWrapper,
+.header,
 .imageWrapper {
   margin-bottom: functions.to-rem(variables.$spacing-md);
 }
