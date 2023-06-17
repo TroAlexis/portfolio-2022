@@ -113,6 +113,9 @@ export const skillsMap: Partial<Record<Skills, SkillProps>> = {
       "--icon-color": "#fafafa",
       "--icon-color-1": "#C4C4C4",
       "--icon-color-2": "#9a9a9a",
+      "--icon-hover-color": "#fff",
+      "--icon-hover-color-1": "#8ED6FB",
+      "--icon-hover-color-2": "#1C78C0",
     }),
     description: [
       "Configuring Webpack for various frameworks",
