@@ -29,7 +29,6 @@ $item-size: calc(50% - #{$spacing / 2});
 
 .description {
   height: functions.to-rem(300px);
-  padding-left: functions.to-rem(variables.$spacing-md);
   overflow-y: auto;
 
   @include mixins.media-max("lg") {

@@ -1,8 +1,10 @@
 import { Skills, skills, skillsMap } from "assets/data/skills";
+import clsx from "clsx";
 import { MainSection } from "components/main/MainSection";
 import styles from "components/main/sections/Skills/index.module.scss";
 import { SkillCardList } from "components/skills/SkillCardList";
 import { SkillDescription } from "components/skills/SkillDescription";
+import { OverflowIndicator } from "components/ui/OverflowIndicator";
 import React, { ComponentProps, FC, useState } from "react";
 
 import { APP_SECTIONS } from "@/config/app/sections";
@@ -27,11 +29,15 @@ export const SkillsSection: FC<Props> = (props) => {
           onItemActive={setSkill}
         />
         {description && (
-          <SkillDescription
-            key={skill}
-            description={description}
-            className={styles.description}
-          />
+          <OverflowIndicator<HTMLUListElement> key={skill}>
+            {({ containerClassName, containerRef }) => (
+              <SkillDescription
+                ref={containerRef}
+                description={description}
+                className={clsx(styles.description, containerClassName)}
+              />
+            )}
+          </OverflowIndicator>
         )}
       </div>
     </MainSection>

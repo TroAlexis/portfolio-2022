@@ -1,0 +1,33 @@
+@use "styles/utils/variables";
+@use "styles/utils/colors";
+@use "styles/utils/functions";
+
+@use "sass:color";
+
+.container {
+  position: relative;
+
+  &::after {
+    position: sticky;
+    top: auto;
+    bottom: -2px;
+    display: block;
+    width: 100%;
+    height: functions.to-rem(variables.$spacing-3xl);
+    margin-top: -#{functions.to-rem(variables.$spacing-3xl)};
+    background: linear-gradient(
+      to top,
+      #{color.adjust(colors.$dark-1000, $alpha: -0.1)},
+      #{color.adjust(colors.$dark-1000, $alpha: -1)}
+    );
+    opacity: 0;
+    content: "";
+    pointer-events: none;
+  }
+}
+
+.overflowing {
+  &::after {
+    opacity: 1;
+  }
+}
