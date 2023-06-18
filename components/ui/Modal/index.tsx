@@ -31,7 +31,12 @@ export const Modal: FC<ModalProps> = ({
       closeTimeoutMS={200}
       {...props}
     >
-      <Button icon className={styles.close} onClick={props.onRequestClose}>
+      <Button
+        icon
+        aria-label={"close"}
+        className={styles.close}
+        onClick={props.onRequestClose}
+      >
         <IconX />
       </Button>
 

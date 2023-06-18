@@ -21,7 +21,7 @@ export const FooterLink: FC<FooterLinkProps> = ({
 }) => {
   const classes = clsx(className, styles.wrapper);
   return (
-    <Link plain className={classes} {...props}>
+    <Link plain className={classes} aria-label={label} {...props}>
       <Link<"span"> is={"span"} className={styles.iconWrapper} plain icon>
         <Icon className={styles.icon}>
           <SvgIcon />

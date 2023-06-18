@@ -11,10 +11,10 @@ export const HeroSocials: FC<Props> = ({ className, ...props }) => {
   const classes = clsx(className, styles.socials);
   return (
     <ul className={classes} {...props}>
-      {socials.map(([key, { icon: SvgIcon, link }], index) => {
+      {socials.map(([key, { icon: SvgIcon, link, label }], index) => {
         return (
           <li key={index}>
-            <Link href={link} icon>
+            <Link href={link} icon aria-label={label}>
               <Icon>
                 <SvgIcon />
               </Icon>

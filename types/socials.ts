@@ -1,7 +1,7 @@
-import { ComponentProps, FC, ReactNode } from "react";
+import { ComponentProps, FC } from "react";
 
 export type Social = {
   icon: FC<ComponentProps<"svg">>;
-  label?: ReactNode;
+  label?: string;
   link: string;
 };

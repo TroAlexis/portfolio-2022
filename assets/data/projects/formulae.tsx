@@ -94,7 +94,11 @@ export const formulaeCard: ProjectCardInfo = {
   name: {
     label: "Formulae",
     links: (
-      <Link href={"https://github.com/TroAlexis/formulae"} icon>
+      <Link
+        href={"https://github.com/TroAlexis/formulae"}
+        icon
+        aria-label={"Formulae github repository"}
+      >
         <Icon>
           <GithubIcon />
         </Icon>

@@ -12,7 +12,13 @@ type Props = Partial<ComponentProps<typeof Link>>;
 export const Logo: FC<Props> = ({ className, ...props }) => {
   const classes = clsx(className, styles.link, visueltPro.className);
   return (
-    <Link href={"/"} icon className={classes} {...props}>
+    <Link
+      href={"/"}
+      aria-label={"Go to home page"}
+      icon
+      className={classes}
+      {...props}
+    >
       <LogoSvg />
     </Link>
   );

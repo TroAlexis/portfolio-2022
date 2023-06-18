@@ -73,7 +73,11 @@ export const ttgClubCard: ProjectCardInfo = {
   name: {
     label: "TTG Club",
     links: (
-      <Link href={"https://github.com/TTG-Club/ttg-club-frontend"} icon>
+      <Link
+        href={"https://github.com/TTG-Club/ttg-club-frontend"}
+        icon
+        aria-label={"TTG Club github repository"}
+      >
         <Icon>
           <GithubIcon />
         </Icon>
