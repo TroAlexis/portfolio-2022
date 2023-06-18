@@ -22,7 +22,7 @@ export const ActionButtons: FC<Props> = ({
           outline
           as={"a"}
           href={"/resume.pdf"}
-          download
+          target={"_blank"}
         >
           <Text as={"span"}>Resume</Text>
         </Button>
