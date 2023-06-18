@@ -41,7 +41,9 @@ export const HeaderLinks: FC<HeaderLinksProps> = ({
   return (
     <ul className={classes} {...props}>
       {links.map(({ id, ...link }) => (
-        <HeaderLink {...link} key={id} onClick={onLinkClick} />
+        <li key={id}>
+          <HeaderLink {...link} onClick={onLinkClick} />
+        </li>
       ))}
     </ul>
   );

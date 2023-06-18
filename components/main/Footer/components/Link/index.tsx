@@ -16,6 +16,7 @@ export const FooterLink: FC<FooterLinkProps> = ({
   icon: SvgIcon,
   label,
   className,
+  link,
   ...props
 }) => {
   const classes = clsx(className, styles.wrapper);
