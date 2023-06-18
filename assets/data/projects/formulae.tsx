@@ -19,7 +19,7 @@ export const formulaProject: Project = {
   id: ProjectSlug.FORMULAE,
   title: "Formulae",
   image: formulaeCover,
-  alt: "Formulae app mockup of desktop and mobile screens with gradient background",
+  alt: "Formulae desktop and mobile screens with gradient background",
   stack: ["Next.js", "Mantine", "Zustand"],
   links: [
     {
@@ -102,7 +102,7 @@ export const formulaeCard: ProjectCardInfo = {
     ),
   },
   cover: formulaeCover,
-  alt: "Formulae app mockup of desktop and mobile screens with gradient background",
+  alt: "Formulae desktop and mobile screens with gradient background",
   description:
     "Formulas creator app. During my trip around Southeast Asia, I encountered the recurring challenge determining the most favorable money exchange options — whether it was cash, card, or cryptocurrency. Inspired by this need, I developed this app as a solution. It allows you to create and save personalized formulas, name variables and expressions, and conveniently reuse them whenever required. Moreover, you can easily share your formulas with others who might find them helpful. To enhance usability, I implemented PWA support, ensuring that you can access the app even offline.",
   links: [

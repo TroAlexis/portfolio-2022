@@ -18,7 +18,7 @@ export const victoriaProject: Project = {
   id: ProjectSlug.VICTORIA,
   title: "V-Victoria",
   image: VictoriaCover,
-  alt: "V-Victoria website mockup of desktop and mobile screens with gradient background",
+  alt: "V-Victoria website desktop and mobile screens with gradient background",
   stack: ["Nuxt.js", "Pug", "SCSS", "Webpack"],
   description: [
     "My first freelance project, where I had the opportunity to oversee every aspect from design to development. While my main focus has always been on development, I decided to step out of my comfort zone and embrace the challenge of taking on the design responsibilities as well. It was an intensive journey that demanded a lot of effort and creativity, but I take immense pride in the final outcome I was able to achieve.",
@@ -110,7 +110,7 @@ export const victoriaCard: ProjectCardInfo = {
   id: ProjectSlug.VICTORIA,
   name: "V-Victoria",
   cover: VictoriaCover,
-  alt: "V-Victoria website mockup of desktop and mobile screens with gradient background",
+  alt: "V-Victoria website desktop and mobile screens with gradient background",
   description:
     "A hotel website for a local business, built from the ground up leveraging power of Nuxt.js, SCSS, and Pug. The fully responsive design ensures a seamless experience across all devices, while advanced optimization techniques guarantee fast loading times. This project allowed me to gain even more valuable experience in frontend development, user experience design, and project management, while successfully bringing the client's vision to life.",
   links: [

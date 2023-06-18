@@ -35,7 +35,7 @@ export const TimelineItem = <T extends ElementType>({
         {label}
       </Heading>
       <div className={styles.body}>
-        <Heading preset={"h4"} as={"h4"} className={styles.title}>
+        <Heading preset={"h4"} as={"h3"} className={styles.title}>
           {title}
         </Heading>
         <Text size={"xs"} as={"span"} weight={500} className={styles.period}>

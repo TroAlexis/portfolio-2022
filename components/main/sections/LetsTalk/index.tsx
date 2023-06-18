@@ -16,7 +16,7 @@ export const LetsTalkSection: FC<Props> = ({ className, ...props }) => {
     <MainSection
       section={section}
       heading={"Let's talk!"}
-      headingProps={{ className: styles.heading }}
+      headingProps={{ className: styles.heading, as: "h4" }}
       className={classes}
       {...props}
     >

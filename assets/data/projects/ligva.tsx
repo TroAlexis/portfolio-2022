@@ -17,7 +17,7 @@ export const ligvaProject: Project = {
   id: ProjectSlug.LIGVA,
   title: "Ligva",
   image: ligvaCover,
-  alt: "Ligva app mockup of desktop and mobile screens with gradient background",
+  alt: "Ligva desktop and mobile screens with gradient background",
   stack: ["Nuxt.js", "LESS", "TailwindCSS", "WebSockets"],
   description: [
     "I was fortunate to join this ambitious project that gave me loads of experience and new skills. As part of the team, I played a crucial role in the project's mid-development phase. My tasks were diverse and involved developing a chat module for seamless client communication, migrating the app to TailwindCSS for improved styling, ensuring a responsive design across various devices, and creating visually appealing landing pages and emails. Unfortunately, the founders of the app faced significant challenges related to funding and intense competition, ultimately leading to the closure of the project shortly after its release.",
@@ -72,7 +72,7 @@ export const ligvaCard: ProjectCardInfo = {
   id: ProjectSlug.LIGVA,
   name: "Ligva",
   cover: ligvaCover,
-  alt: "Ligva app mockup of desktop and mobile screens with gradient background",
+  alt: "Ligva desktop and mobile screens with gradient background",
   description:
     "I had the opportunity to be part of an ambitious startup that was dedicated to revolutionizing the world of translations. Joining the team during the project's mid-development phase, my responsibilities encompassed various tasks, including the development of a chat module for smooth client communication, migrating the app to TailwindCSS, ensuring responsiveness across different devices, as well as crafting visually appealing landing pages and emails. Despite our collective efforts and the promising potential of the app, the challenges of funding and intense competition led to the closure of the project shortly after its release.",
   links: [

@@ -18,7 +18,7 @@ export const ttgClubProject: Project = {
   id: ProjectSlug.TTG_CLUB,
   title: "TTG Club",
   image: ttgClubCover,
-  alt: "TTG Club app mockup of tablet and mobile screens with gradient background",
+  alt: "TTG Club tablet and mobile screens with gradient background",
   stack: ["Vue 3", "Typescript", "SCSS", "Vite"],
   description: [
     "By a stroke of luck, I stumbled upon this amazing app that instantly grabbed my attention. Its contemporary and elegant design, combined with its extensive range of features, made it stand out from other platforms I had used for Dungeons & Dragons (D&D). Intrigued by its potential, I decided to connect with the talented team responsible for its development. To my delight, they were actively seeking frontend developers to help take the app to the next level. Following a series of meetings and successfully completing a test task, I was thrilled to be invited on board and contribute my skills to this awesome project.",
@@ -81,7 +81,7 @@ export const ttgClubCard: ProjectCardInfo = {
     ),
   },
   cover: ttgClubCover,
-  alt: "TTG Club app mockup of tablet and mobile screens with gradient background",
+  alt: "TTG Club tablet and mobile screens with gradient background",
   description:
     "A tabletop games companion app. As an avid player of Dungeons & Dragons, I joined the development of this project in my spare time. What once began as one person's endeavor has now grown into a collaborative effort with a team of passionate enthusiasts. Together, we are building a comprehensive companion for tabletop games, catering to a thriving community of players and visitors. It's a labor of love that combines my passion for D&D with my frontend expertise, and I'm excited to contribute to the growth and success of this project.",
   links: [
