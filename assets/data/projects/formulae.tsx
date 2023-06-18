@@ -19,6 +19,7 @@ export const formulaProject: Project = {
   id: ProjectSlug.FORMULAE,
   title: "Formulae",
   image: formulaeCover,
+  alt: "Formulae app mockup of desktop and mobile screens with gradient background",
   stack: ["Next.js", "Mantine", "Zustand"],
   links: [
     {
@@ -60,6 +61,7 @@ export const formulaProject: Project = {
   paragraphs: [
     {
       image: FormulaeGoal,
+      alt: "Mockup of formula interface with actions menu open",
       description: [
         "The goal of the project was originally to create a simple web app that would allow me to reuse conversion formulas without keeping them in mind and reaching for calculator every time. Then, I started adding more features to improve it and make it more useful and user-friendly.",
       ],
@@ -68,6 +70,7 @@ export const formulaProject: Project = {
     },
     {
       image: FormulaeChallenge,
+      alt: "Mockup of saved formulas with actions menu open",
       description: [
         "One of the problems was that I was too excited about the idea and jumped into development right away without designing and thinking every little detail through. As a result, I am not entirely satisfied with the UX side of the app, but I didn't really have better ideas for improvement at the time, so I decided to leave it as it is and focus on other things.",
       ],
@@ -76,6 +79,7 @@ export const formulaProject: Project = {
     },
     {
       image: FormulaeSoultions,
+      alt: "Mockup demonstrating app customisation settings",
       description: [
         "A fundamental aspect of the project revolved around the concept of creating a formula tree, with the ability to have child formulas nested within parent formulas. This required careful consideration of the data structure to ensure efficient access to child formulas and prevent unnecessary re-rendering of related components. To address this challenge, I implemented a simple yet effective solution using hash maps, which provided O(1) (constant-time) access speed. This approach ensured swift retrieval of child formulas and optimized the overall performance of the app.",
       ],
@@ -98,6 +102,7 @@ export const formulaeCard: ProjectCardInfo = {
     ),
   },
   cover: formulaeCover,
+  alt: "Formulae app mockup of desktop and mobile screens with gradient background",
   description:
     "Formulas creator app. During my trip around Southeast Asia, I encountered the recurring challenge determining the most favorable money exchange options — whether it was cash, card, or cryptocurrency. Inspired by this need, I developed this app as a solution. It allows you to create and save personalized formulas, name variables and expressions, and conveniently reuse them whenever required. Moreover, you can easily share your formulas with others who might find them helpful. To enhance usability, I implemented PWA support, ensuring that you can access the app even offline.",
   links: [

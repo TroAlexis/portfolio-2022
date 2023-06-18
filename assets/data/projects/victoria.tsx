@@ -18,6 +18,7 @@ export const victoriaProject: Project = {
   id: ProjectSlug.VICTORIA,
   title: "V-Victoria",
   image: VictoriaCover,
+  alt: "V-Victoria website mockup of desktop and mobile screens with gradient background",
   stack: ["Nuxt.js", "Pug", "SCSS", "Webpack"],
   description: [
     "My first freelance project, where I had the opportunity to oversee every aspect from design to development. While my main focus has always been on development, I decided to step out of my comfort zone and embrace the challenge of taking on the design responsibilities as well. It was an intensive journey that demanded a lot of effort and creativity, but I take immense pride in the final outcome I was able to achieve.",
@@ -33,6 +34,7 @@ export const victoriaProject: Project = {
   paragraphs: [
     {
       image: VictoriaGoal,
+      alt: "Mockup with gallery and rooms section",
       description: [
         "During my time living in a small seaside town, I had the pleasure of hosting some friends for a summer getaway. To my surprise, the hotel they stayed at had an incredibly outdated website that desperately needed a revamp. Recognizing the potential for improvement, I took the initiative to contact the hotel owner and offer my services as a developer. Thankfully, they were receptive to my proposal, and I eagerly took on the project. Starting with wireframes, I meticulously refined the design based on feedback, before diving into the development phase. It was a rewarding experience to witness the transformation of the website from its initial state to a polished and modern online presence.",
       ],
@@ -41,6 +43,7 @@ export const victoriaProject: Project = {
     },
     {
       image: VictoriaDesign,
+      alt: "Mockup with services section",
       description: [
         "The design aspect was new and challenging for me, but also exciting. To create a visually appealing logo for the client's business, I collaborated with a logo designer and made necessary revisions until we achieved a great logo. Drawing inspiration from Dribbble and Behance, I spent weeks working on the design in Figma, going through several rounds of feedback and revisions to ensure the client's satisfaction. Once the design was finalized, I proceeded with development.",
       ],
@@ -49,6 +52,7 @@ export const victoriaProject: Project = {
     },
     {
       image: VictoriaProblem,
+      alt: "Mockup demonstrating room page with options list",
       description: [
         'Nuxt.js was my framework of choice as it provided an "out-of-the-box" solution with excellent documentation and features. Considering the client\'s request for extensive visual content, I implemented smart strategies. This involved applying lazy-loading techniques for images and lazily loading/initializing the maps module using Intersection Observer.',
         "Image optimization played a crucial role in achieving optimal website performance. I utilized various loaders for image transformations, converting to the WebP format, and employed the picture tag to deliver the best possible image based on the user's viewport. Additionally, I combined SVG logos into an SVG sprite and injected them into the DOM. To further optimize the website, I utilized techniques like code-splitting, preloading, and prefetching.",
@@ -106,6 +110,7 @@ export const victoriaCard: ProjectCardInfo = {
   id: ProjectSlug.VICTORIA,
   name: "V-Victoria",
   cover: VictoriaCover,
+  alt: "V-Victoria website mockup of desktop and mobile screens with gradient background",
   description:
     "A hotel website for a local business, built from the ground up leveraging power of Nuxt.js, SCSS, and Pug. The fully responsive design ensures a seamless experience across all devices, while advanced optimization techniques guarantee fast loading times. This project allowed me to gain even more valuable experience in frontend development, user experience design, and project management, while successfully bringing the client's vision to life.",
   links: [

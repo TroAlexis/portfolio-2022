@@ -17,7 +17,7 @@ export const ProjectParagraph: FC<Props> = ({
   paragraph,
   ...props
 }) => {
-  const { description, image, direction, title } = paragraph;
+  const { description, alt, image, direction, title } = paragraph;
   const classes = clsx(className, styles.wrapper, {
     [styles[`${direction}`]]: direction,
   });
@@ -33,7 +33,7 @@ export const ProjectParagraph: FC<Props> = ({
       <div className={styles.imageWrapper}>
         <Image
           src={image}
-          alt={title}
+          alt={alt}
           width={540}
           height={370}
           className={styles.image}

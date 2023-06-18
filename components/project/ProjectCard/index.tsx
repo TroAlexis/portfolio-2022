@@ -18,6 +18,7 @@ export const ProjectCard: FC<Props> = ({
   name,
   description,
   cover,
+  alt,
   links,
   ...props
 }) => {
@@ -38,7 +39,7 @@ export const ProjectCard: FC<Props> = ({
           loading={"lazy"}
           width={540}
           height={360}
-          alt={description}
+          alt={alt}
           className={styles.image}
         />
       </Link>

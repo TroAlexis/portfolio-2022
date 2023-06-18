@@ -16,7 +16,7 @@ interface Props extends ComponentProps<"div"> {
 }
 
 export const ProjectHead: FC<Props> = ({ project, className, ...props }) => {
-  const { title, image, description, links } = project;
+  const { title, image, alt, description, links } = project;
 
   const classes = clsx(className, styles.head);
 
@@ -29,7 +29,7 @@ export const ProjectHead: FC<Props> = ({ project, className, ...props }) => {
       {image && (
         <Image
           src={image}
-          alt={"Project screenshot in a mockup on gradient background"}
+          alt={alt}
           width={800}
           height={500}
           priority

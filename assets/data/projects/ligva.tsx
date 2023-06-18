@@ -17,6 +17,7 @@ export const ligvaProject: Project = {
   id: ProjectSlug.LIGVA,
   title: "Ligva",
   image: ligvaCover,
+  alt: "Ligva app mockup of desktop and mobile screens with gradient background",
   stack: ["Nuxt.js", "LESS", "TailwindCSS", "WebSockets"],
   description: [
     "I was fortunate to join this ambitious project that gave me loads of experience and new skills. As part of the team, I played a crucial role in the project's mid-development phase. My tasks were diverse and involved developing a chat module for seamless client communication, migrating the app to TailwindCSS for improved styling, ensuring a responsive design across various devices, and creating visually appealing landing pages and emails. Unfortunately, the founders of the app faced significant challenges related to funding and intense competition, ultimately leading to the closure of the project shortly after its release.",
@@ -24,6 +25,7 @@ export const ligvaProject: Project = {
   paragraphs: [
     {
       image: LigvaGoal,
+      alt: "Mockup demonstrating notifications and chat module",
       description: [
         "The goal of the project was to create a platform that would make professional translations easily accessible and cheaper for all people. The idea was to simplify the process, allowing users to effortlessly upload documents, photos, or text and receive high-quality translations within a short timeframe. To ensure the best quality, we had a team of skilled editors who meticulously reviewed each translation to guarantee its correctness. Additionally, the app included a convenient chat module that enabled clients to communicate directly with the translators, facilitating effective collaboration and addressing any specific requirements or details related to the translation process.",
       ],
@@ -32,6 +34,7 @@ export const ligvaProject: Project = {
     },
     {
       image: LigvaLessons,
+      alt: "Mockup demonstrating process of uploading a document",
       description: [
         "The biggest takeaway I gained from this experience is that the success of a project isn't solely dependent on its quality alone. It's essential to recognize that factors such as the market and competition play a significant role. Even if you have a brilliant idea and a top-notch product, it doesn't automatically guarantee success. It's crucial to develop a clear vision of how you will reach your target audience and differentiate yourself from competitors before diving into product development. Equally important is having a solid business plan and a well-defined funding strategy. Without these critical elements, it's easy to become overwhelmed by the sea of competitors and lose sight of your objectives.",
       ],
@@ -40,6 +43,7 @@ export const ligvaProject: Project = {
     },
     {
       image: LigvaSolutions,
+      alt: "Mockup demonstrating how the app works for the clients",
       description: [
         "The biggest challenge I faced during this project was developing a chat module that would allow clients and translators to communicate. I implemented a WebSocket-based solution that enabled real-time communication between the two parties. One of the problems of WebSocket connections is that they can be terminated unexpectedly, so I had to implement automatic reconnection and 'ping-pong' mechanisms to ensure that the chat module would remain functional even if the connection was lost.",
         <>
@@ -68,6 +72,7 @@ export const ligvaCard: ProjectCardInfo = {
   id: ProjectSlug.LIGVA,
   name: "Ligva",
   cover: ligvaCover,
+  alt: "Ligva app mockup of desktop and mobile screens with gradient background",
   description:
     "I had the opportunity to be part of an ambitious startup that was dedicated to revolutionizing the world of translations. Joining the team during the project's mid-development phase, my responsibilities encompassed various tasks, including the development of a chat module for smooth client communication, migrating the app to TailwindCSS, ensuring responsiveness across different devices, as well as crafting visually appealing landing pages and emails. Despite our collective efforts and the promising potential of the app, the challenges of funding and intense competition led to the closure of the project shortly after its release.",
   links: [

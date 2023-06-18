@@ -7,6 +7,7 @@ export type Project = {
   id: string;
   title: ReactNode;
   image?: string | StaticImageData;
+  alt: string;
   description: ReactNode[];
   stack: string[];
   links?: ProjectLink[];
@@ -29,6 +30,7 @@ export enum ProjectParagraphDirection {
 export type ProjectParagraph = {
   title: string;
   image: string | StaticImageData;
+  alt: string;
   direction: ProjectParagraphDirection;
   description: ReactNode[];
 };
@@ -38,5 +40,6 @@ export interface ProjectCardInfo {
   name: string | { label: ReactNode; links: ReactNode };
   description: string;
   cover: string | StaticImageData;
+  alt: string;
   links?: ProjectLink[];
 }
