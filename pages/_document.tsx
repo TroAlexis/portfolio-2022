@@ -1,5 +1,6 @@
 import { addBasePath } from "next/dist/client/add-base-path";
 import { Head, Html, Main, NextScript } from "next/document";
+import Script from "next/script";
 
 export default function Document() {
   return (
@@ -30,6 +31,12 @@ export default function Document() {
         />
         <meta name="msapplication-TileColor" content="#1f1f1f" />
         <meta name="theme-color" content="#1f1f1f" />
+        <Script
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "a09c5c1be49e4305a267965bbe318cf3"}'
+          strategy="afterInteractive"
+        />
       </Head>
       <body>
         <Main />
